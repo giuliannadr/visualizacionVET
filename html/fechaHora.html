@@ -152,21 +152,31 @@
       background-color: rgb(241, 236, 236);
       padding: 10px;
       width: fit-content;
+      height: fit-content;
+       align-items: center;
       margin: 50px auto 0 auto;
       border-radius: 40px;
+      overflow: hidden;
     }
+    .pasos p {
+  margin: 0; /* 🔥 Elimina el espacio fantasma debajo de cada paso */
+}
 
-    .paso {
-      background-color: #bababa;
-      color: white;
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 16px;
-      padding: 15px;
-      border-radius: 25px;
-      width: 160px;
-      text-align: center;
-    }
+.paso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bababa;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 25px;
+  width: 160px;
+  text-align: center;
+  line-height: 1; /* clave para evitar espacio invisible debajo del texto */
+}
 
     #mascota,
     #sede {
