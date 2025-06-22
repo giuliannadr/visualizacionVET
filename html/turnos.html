@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Turnos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilo-principal.css">
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: rgb(252, 252, 252);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      height: 100px;
+      border-radius: 0 0 50px 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 50px;
+    }
+
+    .logo,
+    .acciones {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      justify-content: flex-start;
+    }
+
+    .acciones {
+      justify-content: flex-end;
+      gap: 15px;
+    }
+
+    .botones {
+      flex: 1.5;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .botones a {
+      display: inline-block;
+      width: 100px;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 25px;
+      background-color: rgb(33, 140, 146);
+      text-decoration: none;
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: white;
+    }
+
+    .icono svg {
+      width: 36px;
+      height: 36px;
+      color: #218c92;
+    }
+
+    .logo svg {
+      width: 150px;
+    }
+
+    .titulo {
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+      padding: 20px;
+      width: 300px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      /* 👈 Esto lo centra horizontalmente */
+      text-align: center;
+      /* 👈 Esto centra el texto dentro */
+      border-radius: 25px;
+      /* Opcional: un poco de diseño */
+      color: #218c92;
+      /* Opcional: para que se lea bien sobre el fondo */
+      font-family: sans-serif;
+    }
+
+    .turnos {
+      background-color: #218c92;
+      padding: 20px;
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 25px;
+      color: white;
+      font-family: sans-serif;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Título a la izquierda */
+    .titulo-turnos h4 {
+      margin: 0 0 20px 0;
+      text-align: left;
+    }
+
+    /* Resto centrado */
+    .item-turno {
+      margin-bottom: 10px;
+      background-color: #ffffff;
+      color: #218c92;
+      border-radius: 10px;
+      padding: 10px;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+
+    .item-turno summary {
+      font-weight: bold;
+      font-size: 16px;
+      list-style: none;
+      cursor: pointer;
+      position: relative;
+      top: 5px;
+      left: 5px;
+      padding-right: 20px;
+      background-color: #ffffff;
+      padding-bottom: 10px;
+      /* Para separar del borde */
+    }
+
+    /* Flecha a la derecha */
+    .item-turno summary::before {
+      content: "▾";
+      /* flecha hacia abajo */
+      position: absolute;
+      right: 10px;
+      top: 35%;
+      transform: translateY(-50%) rotate(0deg);
+      font-size: 18px;
+      line-height: 1;
+      transition: transform 0.2s ease;
+      pointer-events: none;
+    }
+
+    .item-turno[open] summary::before {
+      transform: translateY(-50%) rotate(180deg);
+      /* gira hacia arriba */
+    }
+
+    /* Línea separadora debajo del summary cuando está abierto */
+    .item-turno[open] summary::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      width: 400px;
+      height: 1px;
+      background-color: #218c92;
+    }
+
+    /* Sombra cuando está abierto */
+    .item-turno[open] {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .item-turno p {
+      margin-top: 15px;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .cancel-btn {
+      margin-top: 10px;
+      background-color: #c0392b;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin-left: auto;
+    }
+
+    .cancel-btn:hover {
+      background-color: #e74c3c;
+    }
+
+
+    .botones-turno {
+      margin-top: 20px;
+      /* Ajustá este valor si querés más o menos separación */
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .boton-turno {
+      text-decoration: none;
+      background-color: white;
+      padding: 10px;
+      border-radius: 25px;
+      color: #218c92;
+      font-weight: bold;
+    }
+
+    .contenido {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      /* 👈 cambia de 'center' a 'flex-start' */
+      align-items: center;
+      margin-top: 50px;
+      /* 👈 empuja el contenido un poco hacia abajo */
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar bg-light px-4 py-2">
+    <div class="container-fluid position-relative">
+      <a class="navbar-brand p-3" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="120" viewBox="0 0 512 181">
+          <path fill="#0c6d78"
+            d="M90.492 90.492v-41.64H58.623L41.64 31.778V0H0v41.64h31.868l17.076 17.075V80.72L31.868 97.797H0v41.64h41.64v-31.778l17.075-17.076h31.777zM13.88 13.88h13.88v13.88H13.88zm13.88 111.585H13.88v-13.88h13.88z"
+            stroke-width="4.5" stroke="#0c6d78" />
+          <path
+            d="M136.605 180.984h-18.354V90.492h18.354v5.479c2.922-3.562 9.497-6.94 16.528-6.94c19.267 0 30.134 15.98 30.134 34.608s-10.958 34.425-30.134 34.425c-7.122 0-13.606-3.379-16.528-6.94zm0-46.57a13.91 13.91 0 0 0 12.419 7.67c9.953 0 15.797-7.944 15.797-18.445c0-10.684-5.935-18.628-15.797-18.628a14.04 14.04 0 0 0-12.419 7.67zm113.23 22.189H231.48v-6.027a23.96 23.96 0 0 1-17.715 7.58c-14.792 0-23.193-9.771-23.193-24.381V90.583h18.354v39.448c0 6.94 3.378 11.688 10.684 11.688c5.661 0 10.5-3.379 11.87-9.131V90.583h18.446v66.02zm30.498 24.38H261.98v-90.49h18.354v5.479c2.922-3.562 9.497-6.94 16.528-6.94c19.267 0 30.133 15.98 30.133 34.608s-10.957 34.425-30.133 34.425c-7.123 0-13.606-3.379-16.528-6.94zm0-46.57a13.91 13.91 0 0 0 12.419 7.671c9.953 0 15.797-7.944 15.797-18.445c0-10.684-5.935-18.628-15.797-18.628a14.04 14.04 0 0 0-12.419 7.67zm73.051 46.57H335.03v-90.49h18.354v5.479c2.922-3.562 9.497-6.94 16.528-6.94c19.267 0 30.133 15.98 30.133 34.608s-10.957 34.425-30.133 34.425c-7.123 0-13.606-3.379-16.528-6.94zm0-46.57a13.91 13.91 0 0 0 12.419 7.671c9.953 0 15.797-7.944 15.797-18.445c0-10.684-5.935-18.628-15.797-18.628a14.04 14.04 0 0 0-12.419 7.67zm112.499.549c-2.375 14.062-12.693 23.102-29.312 23.102c-19.267 0-32.051-14.062-32.051-34.425c0-19.998 13.332-34.608 31.777-34.608c19.358 0 30.042 13.423 30.042 32.873v5.661h-44.104c.548 9.953 6.209 15.798 14.336 15.798c6.21 0 10.775-2.649 12.236-8.31h17.076zm-43.192-18.628h25.568c-.183-6.94-4.292-12.419-11.87-12.419c-7.032 0-12.054 4.292-13.698 12.419m55.61-11.05h-10.044V90.493H478.3V72.594h18.172v17.898h14.519v14.793h-14.52v28.946c0 5.205 2.831 7.58 7.58 7.58a15.85 15.85 0 0 0 7.944-2.192v16.254c-2.557 1.37-6.94 2.1-11.87 2.1c-13.424 0-21.916-6.666-21.916-21.276v-31.412z" />
+        </svg>
+      </a>
+      <div class="d-none d-lg-flex position-absolute top-50 start-50 translate-middle gap-4">
+        <a class="btn btn-color fw-semibold rounded-4" style="width: 100px;" href="turnos.html">Turnos</a>
+        <a class="btn btn-color fw-semibold rounded-4" style="width: 100px;" href="tienda.html">Tienda</a>
+        <a class="btn btn-color fw-semibold rounded-4" style="width: 100px;" href="#">Tips</a>
+      </div>
+      <div class="d-flex gap-3 align-items-center ms-auto">
+        <a href="../html/carrito.html" class="nav-link position-relative" id="icono-carrito">
+          <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
+          <span id="contador-carrito"
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            style="font-size: 0.75rem; display:none;">0</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#menuResponsive" aria-controls="menuResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="collapse d-lg-none px-4" id="menuResponsive">
+      <ul class="navbar-nav mt-2">
+        <li class="nav-item"><a class="nav-link fw-bold" href="#">Turnos</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="./html/tienda.html">Tienda</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#">Tips</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="contenido">
+    <div class="titulo">
+      <h1>TURNOS</h1>
+    </div>
+    <div class="turnos">
+      <div class="titulo-turnos">
+        <h4>PRÓXIMOS TURNOS</h4>
+      </div>
+
+      <!-- Aquí iría el resto del contenido centrado -->
+      <details class="item-turno">
+        <summary>21/06/2025 - Loki</summary>
+        <p>Hora: 15:30 hs<br>Motivo: Vacunación anual<br>Veterinario: Dra. García</p>
+        <button class="cancel-btn">Cancelar turno</button>
+      </details>
+
+      <!-- Turno 2 -->
+      <details class="item-turno">
+        <summary>23/06/2025 - Mango</summary>
+        <p>Hora: 11:00 hs<br>Motivo: Control general<br>Veterinario: Dr. Pérez</p>
+        <button class="cancel-btn">Cancelar turno</button>
+      </details>
+
+      <div class="botones-turno">
+        <a href="solicitarTurno.html" class="boton-turno">SOLICITAR TURNO</a>
+        <a href="#" class="boton-turno">VER HISTORIAL</a>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

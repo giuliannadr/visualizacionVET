@@ -1,0 +1,155 @@
+[
+    {
+        "id": 1,
+        "nombre": "Alimento Dog Chow Cachorro Gran Comienzo",
+        "precio": 60000,
+        "animal": "perro",
+        "categoria": "alimentos",
+        "edad": [
+            "cachorro"
+        ],
+        "tamanio": [
+            "mediano",
+            "grande"
+        ],
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/dog chow.avif",
+        "detalle": "producto.html?id=1",
+        "descripcion": "Alimento completo y balanceado especialmente formulado para cachorros de razas medianas y grandes. Contiene una mezcla de nutrientes esenciales, incluyendo proteínas de alta calidad, ácidos grasos Omega-3 y Omega-6, que favorecen un crecimiento saludable, desarrollo muscular y el fortalecimiento del sistema inmunológico. Su fórmula también promueve una digestión óptima y un pelaje brillante. Ideal para apoyar el crecimiento y la energía de tu cachorro en sus primeras etapas de vida.",
+        "presentacion": "15 Kg Med/Grande"
+    },
+    {
+        "id": 2,
+        "nombre": "Collar Nylon Rojo",
+        "precio": 14000,
+        "animal": "perro",
+        "categoria": "accesorios",
+        "edad": [
+            "cachorro",
+            "adulto",
+            "adulto-senior"
+        ],
+        "tamanio": [
+            "pequeno",
+            "mediano",
+            "grande"
+        ],
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/collar perro rojo.webp",
+        "detalle": "producto.html?id=2",
+        "descripcion": "Collar de nylon rojo resistente y cómodo para perros de todos los tamaños y edades.",
+        "presentacion": "Tallas S, M, L"
+    },
+    {
+        "id": 3,
+        "nombre": "Dentastix Pedigree Razas Medianas",
+        "precio": 900,
+        "animal": "perro",
+        "categoria": "snacks",
+        "edad": [
+            "adulto"
+        ],
+        "tamanio": [
+            "mediano",
+            "grande"
+        ],
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/dentastix raza mediana.webp",
+        "detalle": "producto.html?id=3",
+        "descripcion": "Snack dental para perros de razas medianas, ayuda a la limpieza dental y al frescor del aliento.",
+        "presentacion": "1 Unidad, Adulto"
+    },
+    {
+        "id": 4,
+        "nombre": "Pipeta Frontline Plus - Frontline 2-10kg",
+        "precio": 10600,
+        "animal": "perro",
+        "categoria": "salud",
+        "edad": [
+            "cachorro",
+            "adulto"
+        ],
+        "tamanio": [
+            "pequeno",
+            "mediano",
+            "grande"
+        ],
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/pipeta frontline.png",
+        "detalle": "producto.html?id=4",
+        "descripcion": "Pipeta antiparasitaria para perros de 2 a 10 kg, protege contra pulgas y garrapatas. Producto de línea premium, apto para todas las razas y todas las etapas de edad (cachorro y adulto).",
+        "presentacion": "Para perros de 2 a 10 kg"
+    },
+    {
+        "id": 5,
+        "nombre": "MasKota Shampoo 2 En 1 Antifrizz - 200 ml",
+        "precio": 15120,
+        "animal": "perro",
+        "categoria": "estetica",
+        "edad": [
+            "todos"
+        ],
+        "tamanio": [
+            "todos"
+        ],
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/shampoo.png",
+        "detalle": "producto.html?id=5",
+        "descripcion": "Shampoo 2 en 1 que controla el frizz, aporta brillo y docilidad al pelaje. Ideal para perros de todos los tamaños y edades.",
+        "presentacion": "Brillo Y Docilidad"
+    },
+    {
+        "id": 6,
+        "nombre": "Alimento Old Prince Novel Cordero y Arroz Perro Adulto Mediano Y Grande - Old Prince",
+        "precio": 17100,
+        "animal": "perro",
+        "categoria": "alimentos",
+        "edad": [
+            "adulto"
+        ],
+        "tamanio": [
+            "mediano",
+            "grande"
+        ],
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/alimento old prince.webp",
+        "detalle": "producto.html?id=6",
+        "descripcion": "El Alimento Old Prince Novel Cordero y Arroz aporta un correcto equilibrio entre la calidad y origen de proteínas, minimizando alergias alimentarias y cutáneas. Mejora la piel y el pelo, reduce intolerancia alimentaria y refuerza el sistema inmunológico intestinal. Ingredientes: Harina de cordero, arroz integral, arveja, gluten de maíz, germen de maíz desgrasado, grasa animal (pollo), aceite de salmón (omega 3 y 6), hidrolizado proteico de menudencias, pulpa de remolacha, levadura de cerveza, zeolita, extracto de yucca schidigera, nucleótidos, minerales y vitaminas.",
+        "presentacion": "3 Kg"
+    },
+    {
+        "id": 7,
+        "nombre": "Alimento Royal Canin Caniche Adulto - Royal Canin",
+        "precio": 13400,
+        "animal": "perro",
+        "categoria": "alimentos",
+        "edad": [
+            "adulto"
+        ],
+        "tamanio": [
+            "pequeno"
+        ],
+        "linea": "super premium",
+        "sabor": "pollo",
+        "raza": [
+            "caniche",
+            "poodle"
+        ],
+        "imagen": "../img/productos/royal canine caniche.webp",
+        "detalle": "producto.html?id=7",
+        "descripcion": "Alimento para perros adultos de raza Caniche, a partir de los 10 meses de edad. Royal Canin Caniche Adult contiene una exclusiva fórmula enriquecida con ácidos grasos Omega 3 (EPA y DHA) y nutrientes que ayudan a mantener saludable el pelaje lanoso del Caniche y a preservar la salud en perros Seniors. Además, su fórmula ayuda a mantener el tono muscular del Caniche gracias a un contenido adecuado de proteínas. Beneficios: Ayuda a mantener el tono muscular del Caniche. Contribuye a preservar la salud en perros Seniors. Ayuda a mantener saludable el pelaje lanoso del Caniche. Ingredientes: Harina de subproductos de pollo, maíz, harina de trigo, arroz, proteína vegetal purificada L.I.P* (gluten de trigo), harina de gluten de maíz, grasas animales (vacuna y pollo), hidrolizado de hígado de pollo y/o cerdo y/o vacuno, pulpa de remolacha, aceite de soja, sales minerales, celulosa purificada, aceite de pescado, levadura de cerveza deshidratada, vitaminas, L-lisina, zeolita, taurina, fructo-oligosacáridos (FOS), DL-metionina, oligoelementos, cisteína, aceite de borraja, oligoelementos quelados, tirosina, cloruro de glucosamina, sulfato de condroitina, extracto de rosa de la India (rico en luteína), L-carnitina, extracto de té verde (rico en polifenoles). *Low Indigestible Protein: proteína seleccionada por su alta asimilación. Vitaminas: Vitamina A, vitamina D3, vitamina E, vitamina C, pantotenato de calcio, niacina, vitamina B1, vitamina B2, vitamina B6, ácido fólico, biotina, vitamina B12, inositol, colina. Sales minerales: Sulfato de calcio, cloruro de potasio, sorbato de potasio, cloruro de sodio, politrifosfato de sodio. Oligoelementos: Sulfato de cobre, sulfato de hierro, óxido de manganeso, óxido de zinc, fuente de iodo (iodato de calcio o iodato de potasio). Oligoelementos quelados: Selenio, cobre, manganeso, zinc. Conservantes y antioxidantes: BHA, galato de propilo y ácido cítrico.",
+        "presentacion": "1 Kg"
+    }
+]

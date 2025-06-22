@@ -1,0 +1,223 @@
+:root {
+    --color-principal: #fcaa2b;
+    --color-verde: #218c92;
+    --color-verde-oscuro: #176468;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.fondo {
+    background-image: url('../img/fondos/fondo-waves2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -100px;
+}
+
+.texto-principal {
+    color: var(--color-principal) !important;
+}
+
+.texto-verde {
+    color: var(--color-verde) !important;
+}
+
+.btn-color {
+    background-color: var(--color-verde);
+    color: white !important;
+    transition: all 200ms;
+}
+
+.btn-color:hover {
+    background-color: var(--color-verde-oscuro);
+    scale: 1.02;
+}
+
+.btn-color:active {
+    background-color: var(--color-verde) !important;
+}
+
+.btn-outline-primary {
+    color: var(--color-verde);
+    border-color: var(--color-verde) !important;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color: var(--color-verde-oscuro);
+}
+
+.btn-outline-primary:active {
+    background-color: var(--color-verde) !important;
+}
+
+
+.navbar {
+    background-color: #ffffff !important;
+    border-radius: 0 0 35px 35px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.footer-puppet {
+    background: var(--color-verde);
+    color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
+    margin-top: 80px;
+}
+
+.logo-footer {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.slogan-footer {
+    font-size: 0.95rem;
+    color: #fffce9;
+    margin-top: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-principal);
+}
+
+
+.sombra {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.233);
+}
+
+.swiper-pagination {
+    position: relative !important;
+    bottom: auto !important;
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--color-verde) !important;
+}
+
+.nav-link .bi {
+    color: var(--color-verde);
+}
+
+.nav-link .bi:hover {
+    color: var(--color-verde-oscuro);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23218c92' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='none' d='M4 7h22v2H4zm0 7h22v2H4zm0 7h22v2H4z'/></svg>");
+}
+
+.navbar-toggler {
+    border: 2px solid #ffffff00;
+    transition: all 100ms ease-in-out;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] {
+    border-color: var(--color-verde);
+}
+
+.nav-link {
+    color: var(--color-verde);
+}
+
+.nav-link:hover {
+    color: var(--color-verde-oscuro);
+}
+
+.img-container {
+    max-width: 450px;
+    width: 100%;
+}
+
+.botones-tienda {
+    margin-top: 250px;
+}
+
+@media (max-width: 1083px) {
+    .botones-tienda {
+        margin-top: 110px;
+    }
+}
+
+@media (max-width: 767px) {
+    .img-container {
+        max-width: 100%;
+        /* para pantallas chicas */
+    }
+
+    .botones-tienda {
+        margin-top: 20px;
+    }
+
+    .contenedor {
+        width: 100%;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .botones-tienda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .contenedor {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+.active {
+    background-color: var(--color-principal) !important;
+    border-color: var(--color-principal) !important;
+}
+
+.form-check-input {
+    transition: all 200ms;
+}
+
+.form-check-input:checked {
+    background-color: var(--color-verde);
+    /* Azul Bootstrap por defecto */
+    border-color: var(--color-verde);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.5);
+    border-color: #28a745;
+}
+
+.btn-outline-secondary {
+    color: var(--color-verde);
+    border-color: var(--color-verde);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-verde);
+}
