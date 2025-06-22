@@ -2,6 +2,7 @@
     --color-principal: #fcaa2b;
     --color-verde: #218c92;
     --color-verde-oscuro: #176468;
+    --color-beige-claro:#fef3e8;
 }
 
 body {
@@ -221,3 +222,8 @@ body {
 .btn-outline-secondary:hover {
     background-color: var(--color-verde);
 }
+
+.bg-color-beige{
+    background-color: var(--color-beige-claro);
+}
+
