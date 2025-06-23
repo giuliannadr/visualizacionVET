@@ -61,6 +61,7 @@ body {
 }
 
 .footer-puppet {
+
     background: var(--color-verde);
     color: white;
     border-top-left-radius: 40px;
