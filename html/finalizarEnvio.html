@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finalizar Compra - Envío o Retiro</title>
+  <link rel="icon" type="image/png" href="../img/patita.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilo-principal.css">
+  <style>
+    .fondoAmarillo {
+      background-image: url('../img/fondos/fondo-waves2.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .opcion-envio {
+      cursor: pointer;
+      border: 2px solid transparent;
+      background: white;
+      color: var(--color-verde);
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 25px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .opcion-envio:hover {
+      transform: scale(1.05);
+    }
+
+    .opcion-envio.selected {
+      border-color: var(--color-principal);
+      background-color: #fff8ec;
+    }
+
+    .formulario-envio {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .pasos {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: rgb(241, 236, 236);
+      padding: 10px;
+      width: fit-content;
+      height: fit-content;
+      align-items: center;
+      margin: 50px auto 0 auto;
+      border-radius: 40px;
+      overflow: hidden;
+    }
+
+    .pasos p {
+      margin: 0;
+    }
+
+    .paso {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #bababa;
+      color: white;
+      font-weight: bold;
+      font-family: sans-serif;
+      font-size: 16px;
+      padding: 15px;
+      border-radius: 25px;
+      width: 160px;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .activo {
+      background-color: green;
+    }
+
+    .completado {
+      background-color: #1c660a;
+    }
+
+    .contenido {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body class="fondoAmarillo">
+  <nav class="navbar px-4 py-2">
+    <div class="container-fluid position-relative">
+      <a class="navbar-brand p-3" href="../index.html">
+        <img src="../img/logoPawCenter.png" width="200px" alt="">
+      </a>
+      <div class="d-none d-lg-flex position-absolute top-50 start-50 translate-middle gap-4">
+        <a class="btn btn-color fw-semibold rounded-4" style="width: 100px;" href="/html/turnos.html">Turnos</a>
+        <a class="btn btn-color fw-semibold rounded-4" style="width: 100px;" href="/html/tienda.html">Tienda</a>
+        <a class="btn btn-color fw-semibold rounded-4" style="width: 100px;" href="">Tips</a>
+      </div>
+      <div class="d-flex gap-3 align-items-center ms-auto">
+        <a href="../html/carrito.html" class="nav-link position-relative" id="icono-carrito">
+          <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
+          <span id="contador-carrito"
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            style="font-size: 0.75rem; display:none;">0</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#menuResponsive" aria-controls="menuResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="collapse d-lg-none px-4" id="menuResponsive">
+      <ul class="navbar-nav mt-2">
+        <li class="nav-item"><a class="nav-link fw-bold" href="#">Turnos</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="./html/tienda.html">Tienda</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#">Tips</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="pasos">
+    <p class="paso completado">PAGO</p>
+    <p class="paso activo">ENVÍO / RETIRO</p>
+    <p class="paso">CONFIRMACIÓN</p>
+  </div>
+
+  <div class="contenido">
+    <h3 class="texto-verde mb-4">Seleccioná el método de entrega</h3>
+    <div class="opcion-envio" data-metodo="Envio">Envío a domicilio</div>
+    <div class="opcion-envio" data-metodo="Retiro">Retiro en veterinaria</div>
+    <p id="mensaje-envio-restringido"
+      style="display:none; color: var(--color-principal); font-weight: bold; max-width: 400px; text-align: center;">
+      El pago en efectivo solo está disponible para retiro en veterinaria.
+    </p>
+
+
+    <form class="formulario-envio" id="formEnvio">
+      <input type="text" class="form-control" placeholder="Dirección" id="direccion">
+      <input type="text" class="form-control" placeholder="Ciudad" id="ciudad">
+      <input type="text" class="form-control" placeholder="Código Postal" id="codigoPostal">
+    </form>
+
+    <div id="sucursalesRetiro" class="formulario-envio" style="display: none;">
+      <label class="form-label fw-bold">Seleccioná la sucursal</label>
+      <select class="form-select" id="sucursalSeleccionada">
+        <option value="">Seleccioná una sucursal</option>
+        <option value="Av. Rivadavia 16284, Morón">Av. Rivadavia 16284, Morón</option>
+        <option value="Juncal 177, Ituzaingó">Juncal 177, Ituzaingó</option>
+        <option value="Av. de Mayo 449, Ramos Mejía">Av. de Mayo 449, Ramos Mejía</option>
+      </select>
+    </div>
+
+
+    <button class="btn btn-color mt-4 px-4 py-2" id="btnEnvio">Siguiente</button>
+  </div>
+
+  <script>
+    const opciones = document.querySelectorAll('.opcion-envio');
+    const formEnvio = document.getElementById('formEnvio');
+    const sucursales = document.getElementById('sucursalesRetiro');
+    const metodoPago = localStorage.getItem('metodoPago');
+    let metodoSeleccionado = null;
+
+    opciones.forEach(op => {
+      op.addEventListener('click', () => {
+        opciones.forEach(o => o.classList.remove('selected'));
+        op.classList.add('selected');
+        metodoSeleccionado = op.dataset.metodo;
+
+        if (metodoSeleccionado === 'Envio') {
+          formEnvio.style.display = 'flex';
+          sucursales.style.display = 'none';
+        } else {
+          formEnvio.style.display = 'none';
+          sucursales.style.display = 'flex';
+        }
+      });
+    });
+
+    if (metodoPago === 'Efectivo') {
+      const envio = document.querySelector('.opcion-envio[data-metodo="Envio"]');
+      envio.style.opacity = '0.5';
+      envio.style.pointerEvents = 'none';
+      envio.classList.remove('selected');
+
+      const retiro = document.querySelector('.opcion-envio[data-metodo="Retiro"]');
+      retiro.classList.add('selected');
+      metodoSeleccionado = 'Retiro';
+      sucursales.style.display = 'flex';
+    }
+
+    document.getElementById('btnEnvio').addEventListener('click', () => {
+      if (!metodoSeleccionado) {
+        alert('Seleccioná un método de entrega');
+        return;
+      }
+
+      localStorage.setItem('metodoEntrega', metodoSeleccionado);
+
+      if (metodoSeleccionado === 'Envio') {
+        const direccion = document.getElementById('direccion').value;
+        const ciudad = document.getElementById('ciudad').value;
+        const codigoPostal = document.getElementById('codigoPostal').value;
+
+        if (!direccion || !ciudad || !codigoPostal) {
+          alert('Completá todos los campos de envío');
+          return;
+        }
+
+        localStorage.setItem('direccion', direccion);
+        localStorage.setItem('ciudad', ciudad);
+        localStorage.setItem('codigoPostal', codigoPostal);
+      } else {
+        const sucursal = document.getElementById('sucursalSeleccionada').value;
+        if (!sucursal) {
+          alert('Seleccioná una sucursal para el retiro');
+          return;
+        }
+        localStorage.setItem('sucursalRetiro', sucursal);
+      }
+
+      window.location.href = 'finalizarConfirmacion.html';
+    });
+  </script>
+  <script src="../js/carrito.js"></script>
+</body>
+
+</html>
