@@ -89,19 +89,6 @@
       font-family: sans-serif;
     }
 
-    .turnos {
-      background-color: white;
-      border: solid 1px rgb(201, 201, 201);
-      padding: 20px;
-      width: 500px;
-      margin: 0 auto;
-      border-radius: 15px;
-      color: white;
-      font-family: sans-serif;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-    }
 
     /* Título a la izquierda */
     .titulo-turnos h4 {
@@ -112,11 +99,11 @@
 
     /* Resto centrado */
     .item-turno {
-      border: solid 2px #218c92;
+      border: solid 2px var(--color-principal);
       margin-bottom: 10px;
-      background-color: #ffffff;
+      background-color: var(--color-beige-claro);
       color: #218c92;
-      border-radius: 10px;
+      border-radius: 15px;
       padding: 10px;
       font-family: sans-serif;
       cursor: pointer;
@@ -131,7 +118,7 @@
       top: 5px;
       left: 5px;
       padding-right: 20px;
-      background-color: #ffffff;
+      background-color: var(--color-beige-claro);
       padding-bottom: 10px;
       /* Para separar del borde */
     }
@@ -161,7 +148,7 @@
       position: absolute;
       bottom: 0;
       left: 0px;
-      width: 400px;
+      width: 300px;
       height: 1px;
       background-color: #218c92;
     }
@@ -290,22 +277,10 @@ main {
       </div>
 
       <!-- Aquí iría el resto del contenido centrado -->
-      <details class="item-turno">
-        <summary>21/06/2025 - Loki</summary>
-        <p>Hora: 15:30 hs<br>Motivo: Vacunación anual<br>Veterinario: Dra. García</p>
-        <button class="cancel-btn">Cancelar turno</button>
-      </details>
-
-      <!-- Turno 2 -->
-      <details class="item-turno">
-        <summary>23/06/2025 - Mango</summary>
-        <p>Hora: 11:00 hs<br>Motivo: Control general<br>Veterinario: Dr. Pérez</p>
-        <button class="cancel-btn">Cancelar turno</button>
-      </details>
-
+      
       <div class="botones-turno">
         <a href="solicitarTurno.html" class="boton-turno">SOLICITAR TURNO</a>
-        <a href="#" class="boton-turno">VER HISTORIAL</a>
+        <a href="historialTurnos.html" class="boton-turno">VER HISTORIAL</a>
       </div>
     </div>
   </div>
@@ -338,6 +313,48 @@ main {
             </div>
         </div>
     </footer>
+    <script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const contenedorTurnos = document.querySelector(".turnos");
+  let turnosGuardados = JSON.parse(localStorage.getItem("turnos")) || [];
+
+  // Mostrar los turnos actuales
+  turnosGuardados.forEach(turno => {
+    const details = document.createElement("details");
+    details.className = "item-turno";
+
+    const summary = document.createElement("summary");
+    summary.textContent = `${turno.fecha} - ${turno.mascota}`;
+
+    const p = document.createElement("p");
+    p.innerHTML = `Hora: ${turno.hora}<br>Sede: ${turno.sede}<br>Veterinario: ${turno.veterinario}`;
+
+    const boton = document.createElement("button");
+    boton.className = "cancel-btn";
+    boton.textContent = "Cancelar turno";
+
+    boton.addEventListener("click", () => {
+      // Filtrar el array para eliminar el turno actual
+      turnosGuardados = turnosGuardados.filter(t => !(t.mascota === turno.mascota && t.fecha === turno.fecha));
+      
+      // Guardar el nuevo array sin el turno cancelado
+      localStorage.setItem("turnos", JSON.stringify(turnosGuardados));
+      
+      // Remover el elemento del DOM para que desaparezca inmediatamente
+      details.remove();
+    });
+
+    details.appendChild(summary);
+    details.appendChild(p);
+    details.appendChild(boton);
+
+    // Insertar antes de los botones para mantener orden
+    contenedorTurnos.insertBefore(details, contenedorTurnos.querySelector(".botones-turno"));
+  });
+});
+
+</script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
