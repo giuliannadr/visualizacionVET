@@ -2,7 +2,7 @@
     --color-principal: #fcaa2b;
     --color-verde: #218c92;
     --color-verde-oscuro: #176468;
-    --color-beige-claro:#fef3e8;
+    --color-beige-claro: #fef3e8;
 
 }
 
@@ -62,7 +62,6 @@ body {
 }
 
 .footer-puppet {
-
     background: var(--color-verde);
     color: white;
     border-top-left-radius: 40px;
@@ -225,129 +224,148 @@ body {
     background-color: var(--color-verde);
 }
 
-.bg-color-beige{
+.bg-color-beige {
     background-color: var(--color-beige-claro);
 }
 
-    .turnos {
-      background-color: white;
-       border: solid 1px rgb(201, 201, 201);
-    
-      padding: 20px;
-      width: 400px;
-      margin: 0 auto;
-      border-radius: 15px;
-      color: #218c92;
-      font-family: sans-serif;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-    }
-        .mascota-btn {
-      /* estilos base */
-      cursor: pointer;
-      background-color: #bababa;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 16px;
-      user-select: none;
-      transition: background-color 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 300px;
-    }
+.turnos {
+    background-color: white;
+    border: solid 1px rgb(201, 201, 201);
 
-    .mascota-btn:hover{
-        background-color: var(--color-beige-claro);
-        color: var(--color-verde-oscuro);
-               border: solid 1px var(--color-principal);
-    }
-
-    .mascota-btn input[type="radio"] {
-      display: none;
-    }
-
-    .mascota-btn.selected {
-      background-color: var(--color-beige-claro);
-      color: var(--color-verde-oscuro);
-     box-shadow: 0 0 15px var(--color-principal);
-    }
-        .pasos {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      background-color: rgb(241, 236, 236);
-      padding: 10px;
-      width: fit-content;
-      height: fit-content;
-      align-items: center;
-      margin: 50px auto 0 auto;
-      border-radius: 40px;
-      overflow: hidden;
-    }
-
-    .pasos p {
-      margin: 0;
-      /* 🔥 Elimina el espacio fantasma debajo de cada paso */
-    }
-    html, body {
-  height: 100%;
-  margin: 0;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+    color: #218c92;
+    font-family: sans-serif;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
+.mascota-btn {
+    /* estilos base */
+    cursor: pointer;
+    background-color: #bababa;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 16px;
+    user-select: none;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.mascota-btn:hover {
+    background-color: var(--color-beige-claro);
+    color: var(--color-verde-oscuro);
+    border: solid 1px var(--color-principal);
+}
+
+.mascota-btn input[type="radio"] {
+    display: none;
+}
+
+.mascota-btn.selected {
+    background-color: var(--color-beige-claro);
+    color: var(--color-verde-oscuro);
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+.pasos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgb(241, 236, 236);
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    border-radius: 40px;
+    overflow: hidden;
+    flex-wrap: wrap; /* Para que los items puedan bajar si no hay espacio */
+}
+
+.pasos p {
+    margin: 0;
+}
+
+.paso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bababa;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 25px;
+    width: 160px;
+    text-align: center;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .pasos {
+        flex-direction: column;
+        gap: 10px;
+        width: 90vw;  /* que tome casi todo el ancho */
+        margin: 20px auto;
+        border-radius: 20px;
+        padding: 15px;
+    }
+    .paso {
+        width: 100%;  /* ocupa todo el ancho del contenedor */
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 15px;
+    }
+}
+
+
 body {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-  flex: 1;
+    flex: 1;
 }
 
 
-.boton-turno:hover{
+.boton-turno:hover {
     background-color: #176468;
 }
-    .paso {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #bababa;
-      color: white;
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 16px;
-      padding: 15px;
-      border-radius: 25px;
-      width: 160px;
-      text-align: center;
-      line-height: 1;
-      /* clave para evitar espacio invisible debajo del texto */
-    }
 
-    
-    .titulo {
-      font-size: 12px;
-      margin: 0 auto;
-      margin-bottom: 50px;
-      /* 👈 Esto lo centra horizontalmente */
-      text-align: center;
-      /* 👈 Esto centra el texto dentro */
-      color: #218c92;
-      /* Opcional: para que se lea bien sobre el fondo */
-      font-family: sans-serif;
-    }
-      .contenido {
 
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      /* 👈 cambia de 'center' a 'flex-start' */
-      align-items: center;
-      margin-top: 50px;
-      /* 👈 empuja el contenido un poco hacia abajo */
-    }
+.titulo {
+    font-size: 12px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    /* 👈 Esto lo centra horizontalmente */
+    text-align: center;
+    /* 👈 Esto centra el texto dentro */
+    color: #218c92;
+    /* Opcional: para que se lea bien sobre el fondo */
+    font-family: sans-serif;
+}
+
+.contenido {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* 👈 cambia de 'center' a 'flex-start' */
+    align-items: center;
+    margin-top: 50px;
+    /* 👈 empuja el contenido un poco hacia abajo */
+}

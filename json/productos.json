@@ -151,5 +151,126 @@
         "detalle": "producto.html?id=7",
         "descripcion": "Alimento para perros adultos de raza Caniche, a partir de los 10 meses de edad. Royal Canin Caniche Adult contiene una exclusiva fórmula enriquecida con ácidos grasos Omega 3 (EPA y DHA) y nutrientes que ayudan a mantener saludable el pelaje lanoso del Caniche y a preservar la salud en perros Seniors. Además, su fórmula ayuda a mantener el tono muscular del Caniche gracias a un contenido adecuado de proteínas. Beneficios: Ayuda a mantener el tono muscular del Caniche. Contribuye a preservar la salud en perros Seniors. Ayuda a mantener saludable el pelaje lanoso del Caniche. Ingredientes: Harina de subproductos de pollo, maíz, harina de trigo, arroz, proteína vegetal purificada L.I.P* (gluten de trigo), harina de gluten de maíz, grasas animales (vacuna y pollo), hidrolizado de hígado de pollo y/o cerdo y/o vacuno, pulpa de remolacha, aceite de soja, sales minerales, celulosa purificada, aceite de pescado, levadura de cerveza deshidratada, vitaminas, L-lisina, zeolita, taurina, fructo-oligosacáridos (FOS), DL-metionina, oligoelementos, cisteína, aceite de borraja, oligoelementos quelados, tirosina, cloruro de glucosamina, sulfato de condroitina, extracto de rosa de la India (rico en luteína), L-carnitina, extracto de té verde (rico en polifenoles). *Low Indigestible Protein: proteína seleccionada por su alta asimilación. Vitaminas: Vitamina A, vitamina D3, vitamina E, vitamina C, pantotenato de calcio, niacina, vitamina B1, vitamina B2, vitamina B6, ácido fólico, biotina, vitamina B12, inositol, colina. Sales minerales: Sulfato de calcio, cloruro de potasio, sorbato de potasio, cloruro de sodio, politrifosfato de sodio. Oligoelementos: Sulfato de cobre, sulfato de hierro, óxido de manganeso, óxido de zinc, fuente de iodo (iodato de calcio o iodato de potasio). Oligoelementos quelados: Selenio, cobre, manganeso, zinc. Conservantes y antioxidantes: BHA, galato de propilo y ácido cítrico.",
         "presentacion": "1 Kg"
+    },
+    {
+        "id": 8,
+        "nombre": "Alimento Excellent Pollo Y Arroz para Gato - Excellent",
+        "precio": 26400,
+        "animal": "gato",
+        "categoria": "alimentos",
+        "edad": [
+            "cachorro",
+            "adulto"
+        ],
+        "tamanio": [
+            "mediano"
+        ],
+        "linea": "premium",
+        "sabor": "pollo",
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/alimento gato.webp",
+        "detalle": "producto.html?id=8",
+        "descripcion": "Excellent Gato Adulto Pollo Y Arroz es un alimento Premium para gatos adultos mayores de un año. Este alimento tiene ingredientes de alta calidad que permiten mantener un pH adecuado en la orina que contribuye a impedir la formación de cálculos y cristales. Tiene una relación adecuada de proteínas y calorías, disminuyendo la masa corporal grasa, evitando los efectos del sobrepeso.",
+        "presentacion": "3 Kg"
+    },
+    {
+        "id": 9,
+        "nombre": "Cama Huella Paris Tomate",
+        "precio": 97050,
+        "animal": "gato",
+        "categoria": "accesorios",
+        "edad": [
+            "todos",
+            "cachorro",
+            "adulto",
+            "adulto-senior"
+        ],
+        "tamanio": [
+            "todos",
+            "pequeno",
+            "mediano",
+            "grande"
+        ],
+        "linea": "premium",
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/cama gato.webp",
+        "detalle": "producto.html?id=9",
+        "descripcion": "La Cama Huella París es una gran alternativa para darle a tu perro un descanso de calidad. Ofrece un diseño chic y moderno para combinar con la decoración del hogar.<br><br><strong>Beneficios:</strong><ul><li>Incluye 2 almohadones toy (color sujeto a disponibilidad).</li><li>100% hecho a mano.</li><li>Diseño de calidad.</li><li>Promete un descanso superior para tu mascota.</li></ul><strong>Materiales:</strong><ul><li>Telas tejidas Panamá.</li><li>Espuma de Alta Densidad.</li></ul>",
+        "presentacion": "Tamaño: L"
+    },
+    {
+        "id": 10,
+        "nombre": "Pipeta Perfos Felino Multidosis",
+        "precio": 12900,
+        "animal": "gato",
+        "categoria": "salud",
+        "edad": [
+            "todos",
+            "cachorro",
+            "adulto",
+            "adulto-senior"
+        ],
+        "tamanio": [
+            "todos"
+        ],
+        "linea": "premium",
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/pipeta perfos.webp",
+        "detalle": "producto.html?id=10",
+        "descripcion": "La Pipeta Perfos Felino Multidosis es un antiparasitario externo indicado para gatos de todas las edades. Está formulada para el control y tratamiento de infestaciones causadas por pulgas, y se recomienda también como tratamiento complementario de la dermatitis alérgica por pulgas (DAPP).<br><br><strong>Beneficios:</strong><ul><li>Fácil de administrar.</li><li>Ideal para hogares con múltiples gatos.</li><li>Contiene varias dosis en una sola presentación.</li><li>Ayuda a prevenir infestaciones recurrentes.</li></ul>",
+        "presentacion": "10 cc (Multidosis)"
+    },
+    {
+        "id": 11,
+        "nombre": "Piedra Sanicat Clumping",
+        "precio": 7000,
+        "animal": "gato",
+        "categoria": "estetica",
+        "edad": [
+            "todos",
+            "cachorro",
+            "adulto",
+            "adulto-senior"
+        ],
+        "tamanio": [
+            "todos"
+        ],
+        "linea": "premium",
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/piedra sanicat.webp",
+        "detalle": "producto.html?id=11",
+        "descripcion": "La Piedra Sanicat Clumping de 5 kg es una arena sanitaria para gatos, elaborada con minerales naturales que, al entrar en contacto con líquidos, forman aglomerados compactos. Esto facilita la limpieza diaria de la bandeja, ya que permite retirar los desechos sin reemplazar toda la arena.<br><br><strong>Beneficios:</strong><ul><li>Alto poder aglutinante.</li><li>Minimiza los olores desagradables.</li><li>Fácil y rápida de limpiar.</li><li>Duradera: rinde más con menos cantidad.</li><li>Hecha con minerales naturales, segura para tu gato.</li></ul>",
+        "presentacion": "5 Kg"
+    },
+    {
+        "id": 12,
+        "nombre": "Whiskas Snacks Delicioso Sabor Salmón",
+        "precio": 1900,
+        "animal": "gato",
+        "categoria": "snacks",
+        "edad": [
+            "todos",
+            "adulto",
+            "adulto-senior"
+        ],
+        "tamanio": [
+            "todos"
+        ],
+        "linea": "premium",
+        "raza": [
+            "todas"
+        ],
+        "imagen": "../img/productos/whiskas salmon.webp",
+        "detalle": "producto.html?id=12",
+        "descripcion": "Whiskas Snacks Delicioso Sabor Salmón es un premio ideal para gatos adultos. Su textura crujiente por fuera y suave por dentro lo hace irresistible para tu mascota. Además, está formulado con nutrientes esenciales que complementan su alimentación diaria.<br><br><strong>Beneficios:</strong><ul><li>Textura crocante por fuera y suave por dentro.</li><li>Irresistible sabor a salmón.</li><li>Aporta vitaminas y minerales esenciales.</li><li>Ideal como premio o snack entre comidas.</li></ul>",
+        "presentacion": "40 Grs"
     }
 ]

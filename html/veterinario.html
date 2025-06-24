@@ -83,9 +83,9 @@
       font-family: sans-serif;
     }
 
-   
 
-    
+
+
 
     .botones-turno {
       margin-top: 40px;
@@ -119,7 +119,7 @@
       /* <-- Para que el cursor cambie */
     }
 
-  
+
 
 
     #mascota,
@@ -166,7 +166,7 @@
       border: solid 1px var(--color-principal);
     }
 
-   
+
 
     /* Cuando radio está seleccionado, cambiar fondo */
     input[type="radio"]:checked+label.vet-option {
@@ -241,93 +241,89 @@
 </nav>
 
   <main>
-  <div class="pasos">
-    <p class="paso" id="mascota">MASCOTA</p>
-    <p class="paso" id="sede">SEDE</p>
-    <p class="paso" id="fecha-hora">FECHA Y HORA</p>
-    <p class="paso" id="veterinario">VETERINARIO</p>
-  </div>
-  <div class="contenido">
-    <div class="titulo">
-      <h1 style="font-weight: 600;">SELECCIONE VETERINARIO</h1>
+    <div class="pasos">
+      <p class="paso" id="mascota">MASCOTA</p>
+      <p class="paso" id="sede">SEDE</p>
+      <p class="paso" id="fecha-hora">FECHA Y HORA</p>
+      <p class="paso" id="veterinario">VETERINARIO</p>
     </div>
+    <div class="contenido">
+      <div class="titulo">
+        <h1 style="font-weight: 600;">SELECCIONE VETERINARIO</h1>
+      </div>
 
 
 
-    <form id="form-veterinario" action="resumenTurno.html" method="get">
+      <form id="form-veterinario" action="resumenTurno.html" method="get">
 
-      <input type="radio" name="veterinario" id="vet1" value="Dra. Ana Pérez" required />
-      <label class="vet-option" for="vet1">
-        <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez" />
-        <div class="nombre">Dra. Ana Pérez</div>
-        <div class="especialidad">Medicina General</div>
-      </label>
+        <input type="radio" name="veterinario" id="vet1" value="Dra. Ana Pérez" required />
+        <label class="vet-option" for="vet1">
+          <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez" />
+          <div class="nombre">Dra. Ana Pérez</div>
+          <div class="especialidad">Medicina General</div>
+        </label>
 
-      <input type="radio" name="veterinario" id="vet2" value="Dr. Carlos Gómez" />
-      <label class="vet-option" for="vet2">
-        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez" />
-        <div class="nombre">Dr. Carlos Gómez</div>
-        <div class="especialidad">Cirugía</div>
-      </label>
+        <input type="radio" name="veterinario" id="vet2" value="Dr. Carlos Gómez" />
+        <label class="vet-option" for="vet2">
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez" />
+          <div class="nombre">Dr. Carlos Gómez</div>
+          <div class="especialidad">Cirugía</div>
+        </label>
 
-      <input type="radio" name="veterinario" id="vet3" value="Dra. Laura Ruiz" />
-      <label class="vet-option" for="vet3">
-        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz" />
-        <div class="nombre">Dra. Laura Ruiz</div>
-        <div class="especialidad">Dermatología</div>
-      </label>
+        <input type="radio" name="veterinario" id="vet3" value="Dra. Laura Ruiz" />
+        <label class="vet-option" for="vet3">
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz" />
+          <div class="nombre">Dra. Laura Ruiz</div>
+          <div class="especialidad">Dermatología</div>
+        </label>
 
-    </form>
-
-
+      </form>
 
 
-    <div class="botones-turno">
-      <a href="fechaHora.html" class="boton-turno">VOLVER</a>
-      <button id="submit-btn" class="boton-turno">SIGUIENTE</button>
+
+
+      <div class="botones-turno">
+        <a href="fechaHora.html" class="boton-turno">VOLVER</a>
+        <button id="submit-btn" class="boton-turno">SIGUIENTE</button>
+      </div>
     </div>
-  </div>
-</main>
- <footer class="footer-puppet">
-        <div class="container py-3">
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-                    <a class="logo-footer p-3" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="120" viewBox="0 0 512 181">
-                            <path fill="#fcaa2b"
-                                d="M90.492 90.492v-41.64H58.623L41.64 31.778V0H0v41.64h31.868l17.076 17.075V80.72L31.868 97.797H0v41.64h41.64v-31.778l17.075-17.076h31.777zM13.88 13.88h13.88v13.88H13.88zm13.88 111.585H13.88v-13.88h13.88z"
-                                stroke-width="4.5" stroke="#fcaa2b" />
-                            <path fill="#ffff"
-                                d="M136.605 180.984h-18.354V90.492h18.354v5.479c2.922-3.562 9.497-6.94 16.528-6.94c19.267 0 30.134 15.98 30.134 34.608s-10.958 34.425-30.134 34.425c-7.122 0-13.606-3.379-16.528-6.94zm0-46.57a13.91 13.91 0 0 0 12.419 7.67c9.953 0 15.797-7.944 15.797-18.445c0-10.684-5.935-18.628-15.797-18.628a14.04 14.04 0 0 0-12.419 7.67zm113.23 22.189H231.48v-6.027a23.96 23.96 0 0 1-17.715 7.58c-14.792 0-23.193-9.771-23.193-24.381V90.583h18.354v39.448c0 6.94 3.378 11.688 10.684 11.688c5.661 0 10.5-3.379 11.87-9.131V90.583h18.446v66.02zm30.498 24.38H261.98v-90.49h18.354v5.479c2.922-3.562 9.497-6.94 16.528-6.94c19.267 0 30.133 15.98 30.133 34.608s-10.957 34.425-30.133 34.425c-7.123 0-13.606-3.379-16.528-6.94zm0-46.57a13.91 13.91 0 0 0 12.419 7.671c9.953 0 15.797-7.944 15.797-18.445c0-10.684-5.935-18.628-15.797-18.628a14.04 14.04 0 0 0-12.419 7.67zm73.051 46.57H335.03v-90.49h18.354v5.479c2.922-3.562 9.497-6.94 16.528-6.94c19.267 0 30.133 15.98 30.133 34.608s-10.957 34.425-30.133 34.425c-7.123 0-13.606-3.379-16.528-6.94zm0-46.57a13.91 13.91 0 0 0 12.419 7.671c9.953 0 15.797-7.944 15.797-18.445c0-10.684-5.935-18.628-15.797-18.628a14.04 14.04 0 0 0-12.419 7.67zm112.499.549c-2.375 14.062-12.693 23.102-29.312 23.102c-19.267 0-32.051-14.062-32.051-34.425c0-19.998 13.332-34.608 31.777-34.608c19.358 0 30.042 13.423 30.042 32.873v5.661h-44.104c.548 9.953 6.209 15.798 14.336 15.798c6.21 0 10.775-2.649 12.236-8.31h17.076zm-43.192-18.628h25.568c-.183-6.94-4.292-12.419-11.87-12.419c-7.032 0-12.054 4.292-13.698 12.419m55.61-11.05h-10.044V90.493H478.3V72.594h18.172v17.898h14.519v14.793h-14.52v28.946c0 5.205 2.831 7.58 7.58 7.58a15.85 15.85 0 0 0 7.944-2.192v16.254c-2.557 1.37-6.94 2.1-11.87 2.1c-13.424 0-21.916-6.666-21.916-21.276v-31.412z" />
-                        </svg>
-                    </a>
-                    <p class="slogan-footer fw-semibold">Cuidamos a tu mascota todo el año</p>
-                </div>
-                <div class="col-md-8">
-                    <ul class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end gap-4">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Turnos</a></li>
-                        <li><a href="#">Tienda</a></li>
-                        <li><a href="#">Tips</a></li>
-                        <li><a href="#">Mi Perfil</a></li>
-                        <li><a href="#">Carrito</a></li>
-                    </ul>
-                </div>
-            </div>
+  </main>
+  <footer class="footer-puppet">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+          <a class="logo-footer" href="#">
+            <a class="navbar-brand" href="../index.html">
+              <img src="../img/logoPawCenter.png" width="200px" alt="">
+            </a>
+          </a>
+          <p class="slogan-footer fw-semibold">Cuidamos a tu mascota todo el año</p>
         </div>
-    </footer>
+        <div class="col-md-8">
+          <ul class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end gap-4">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Turnos</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Tips</a></li>
+            <li><a href="#">Mi Perfil</a></li>
+            <li><a href="#">Carrito</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
-document.getElementById('submit-btn').addEventListener('click', function () {
-  const form = document.getElementById('form-veterinario');
-  if (form.checkValidity()) {
-    const vetSeleccionado = document.querySelector('input[name="veterinario"]:checked').value;
-    localStorage.setItem('veterinario', vetSeleccionado);
-    form.submit();
-  } else {
-    form.reportValidity();
-  }
-});
+    document.getElementById('submit-btn').addEventListener('click', function () {
+      const form = document.getElementById('form-veterinario');
+      if (form.checkValidity()) {
+        const vetSeleccionado = document.querySelector('input[name="veterinario"]:checked').value;
+        localStorage.setItem('veterinario', vetSeleccionado);
+        form.submit();
+      } else {
+        form.reportValidity();
+      }
+    });
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
