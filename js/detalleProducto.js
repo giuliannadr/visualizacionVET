@@ -34,7 +34,7 @@ async function mostrarDetalle() {
     document.getElementById('producto-nombre').textContent = producto.nombre;
     document.getElementById('producto-presentacion').textContent = producto.presentacion;
     document.getElementById('producto-precio').textContent = `$ ${producto.precio.toLocaleString()}`;
-    document.getElementById('producto-descripcion').textContent = producto.descripcion;
+    document.getElementById('producto-descripcion').innerHTML = producto.descripcion;
 
     document.getElementById('btn-sumar').addEventListener('click', () => actualizarCantidad('sumar'));
     document.getElementById('btn-restar').addEventListener('click', () => actualizarCantidad('restar'));

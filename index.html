@@ -14,7 +14,6 @@
 </head>
 
 <body class="fondo">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <nav class="navbar px-4 py-2">
         <div class="container-fluid position-relative">
             <a class="navbar-brand p-3" href="../index.html">
@@ -215,39 +214,88 @@
         <section class="d-flex flex-column align-items-center justify-content-center p-4 p-md-5"
             style="margin-top: 100px">
             <h2 class="mb-5 fs-4 fs-md-3">NUESTROS VETERINARIOS</h2>
-            <div class="row g-4 px-3 px-md-5" style="max-width: 1200px; width: 100%;">
+
+            <!-- Slider para pantallas pequeñas -->
+            <div class="d-block d-lg-none px-3" style="max-width: 400px; margin: 0 ;">
+                <div class="swiper mySwiper-vets">
+                    <div class="swiper-wrapper">
+                        <!-- Slides veterinarios (igual que antes) -->
+                        <div class="swiper-slide">
+                            <article class="card p-4 sombra text-center border-0 h-100">
+                                <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez"
+                                    class="mx-auto rounded-circle mb-3"
+                                    style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Ana Pérez</h5>
+                                    <p class="card-text text-muted mb-0">Medicina General</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card p-4 sombra text-center border-0 h-100">
+                                <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez"
+                                    class="mx-auto rounded-circle mb-3"
+                                    style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dr. Carlos Gómez</h5>
+                                    <p class="card-text text-muted mb-0">Cirugía</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card p-4 sombra text-center border-0 h-100">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz"
+                                    class="mx-auto rounded-circle mb-3"
+                                    style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Laura Ruiz</h5>
+                                    <p class="card-text text-muted mb-0">Dermatología</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-vets mt-4"></div>
+            </div>
+
+            <!-- Grilla para pantallas grandes -->
+            <div class="row g-4 px-3 px-md-5 d-none d-lg-flex" style="max-width: 1200px; width: 100%;">
                 <div class="col-12 col-md-6 col-lg-4">
                     <article class="card p-4 sombra text-center border-0 h-100">
-                        <img src="img/imagen medic.png" alt="Veterinario" class="mx-auto rounded-circle mb-3"
+                        <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez"
+                            class="mx-auto rounded-circle mb-3"
                             style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
                         <div class="card-body p-0">
-                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6">NOMBRE APELLIDO</h5>
-                            <p class="card-text text-muted mb-0">ESPECIALIDAD</p>
+                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Ana Pérez</h5>
+                            <p class="card-text text-muted mb-0">Medicina General</p>
                         </div>
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <article class="card p-4 sombra text-center border-0 h-100">
-                        <img src="img/imagen medic.png" alt="Veterinario" class="mx-auto rounded-circle mb-3"
+                        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez"
+                            class="mx-auto rounded-circle mb-3"
                             style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
                         <div class="card-body p-0">
-                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6">NOMBRE APELLIDO</h5>
-                            <p class="card-text text-muted mb-0">ESPECIALIDAD</p>
+                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dr. Carlos Gómez</h5>
+                            <p class="card-text text-muted mb-0">Cirugía</p>
                         </div>
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <article class="card p-4 sombra text-center border-0 h-100">
-                        <img src="img/imagen medic.png" alt="Veterinario" class="mx-auto rounded-circle mb-3"
+                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz"
+                            class="mx-auto rounded-circle mb-3"
                             style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
                         <div class="card-body p-0">
-                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6">NOMBRE APELLIDO</h5>
-                            <p class="card-text text-muted mb-0">ESPECIALIDAD</p>
+                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Laura Ruiz</h5>
+                            <p class="card-text text-muted mb-0">Dermatología</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
+
     </main>
     <footer class="footer-puppet">
         <div class="container py-5">
@@ -288,6 +336,14 @@
             spaceBetween: 16,
             pagination: {
                 el: ".swiper-pagination-tips",
+                clickable: true,
+            },
+        });
+
+        new Swiper(".mySwiper-vets", {
+            spaceBetween: 16,
+            pagination: {
+                el: ".swiper-pagination-vets",
                 clickable: true,
             },
         });
