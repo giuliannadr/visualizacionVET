@@ -72,9 +72,6 @@
     }
 
     .titulo {
-
-
-
       padding: 20px;
       width: 300px;
       margin: 0 auto;
@@ -327,7 +324,7 @@
         summary.textContent = `${turno.fecha} - ${turno.mascota}`;
 
         const p = document.createElement("p");
-        p.innerHTML = `Hora: ${turno.hora}<br>Sede: ${turno.sede}<br>Veterinario: ${turno.veterinario}`;
+       p.innerHTML = `Hora: ${turno.hora}<br>Motivo: ${turno.motivo}<br>Observaciones de motivo: ${turno.observacion}<br>Sede: ${turno.sede}<br>Veterinario: ${turno.veterinario}`;
 
         const boton = document.createElement("button");
         boton.className = "cancel-btn";

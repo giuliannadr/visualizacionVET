@@ -31,116 +31,41 @@
       text-align: left;
     }
 
-    .botones-turno {
+.botones-turno {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  width: 800px; /* Aumentado para que entre el nuevo ancho de los botones */
+  margin-left: auto;
+  margin-right: auto;
+  gap: 300px; /* Podés ajustar esto a gusto */
+}
+#volver{
+  background-color: #54acb1;
+}
+
+.boton-turno {
+  font-family: sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #218c92;
+  padding: 15px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  width: 220px; /* Aumentado */
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+    .detalles-turno{
       margin-top: 40px;
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
-      width: 400px;
-      /* igual que .turnos */
-      margin-left: auto;
-      /* para que quede centrado igual que .turnos */
-      margin-right: auto;
-      gap: 0;
-    }
-
-
-    .boton-turno {
-      font-family: sans-serif;
-      font-size: 16px;
-      text-decoration: none;
-      background-color: #218c92;
-      padding: 15px;
-      border-radius: 25px;
-      color: white;
-      font-weight: bold;
-      width: 150px;
-      text-align: center;
-      border: none;
-      /* <-- Agregado para quitar borde */
-      outline: none;
-      /* <-- Opcional para evitar contorno en foco */
-      cursor: pointer;
-      /* <-- Para que el cursor cambie */
-    }
-
-
-
-
-    #mascota,
-    #sede,
-    #fecha-hora {
-      background-color: rgb(21, 227, 21);
-    }
-
-    #veterinario {
-      background-color: rgb(5, 135, 5);
-    }
-
-    form {
-      display: flex;
-      justify-content: center;
-      /* centra los items en el contenedor */
-      gap: 20px;
-    }
-
-    /* Ocultar radios reales */
-    input[type="radio"] {
-      display: none;
-    }
-
-    /* Estilo para cada label que actúa como opción */
-
-    label.vet-option {
-      cursor: pointer;
-      border-radius: 20px;
-      padding: 15px;
-      flex: 1;
-      transition: background-color 0.3s;
-
-      /* Esto centra todo dentro del label */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      /* para que el texto también se centre */
-    }
-
-    label.vet-option:hover {
-      background-color: var(--color-beige-claro);
-      border: solid 1px var(--color-principal);
-    }
-
-
-
-    /* Cuando radio está seleccionado, cambiar fondo */
-    input[type="radio"]:checked+label.vet-option {
-      background-color: var(--color-beige-claro);
-      color: #004747;
-      box-shadow: 0 0 15px var(--color-principal);
-    }
-
-    /* Imagen circular */
-    label.vet-option img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #2bc7cf;
-      margin-bottom: 10px;
-    }
-
-    /* Nombre y especialidad */
-    label.vet-option .nombre {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 5px;
-      color: #10787d;
-      font-family: sans-serif;
-    }
-
-    label.vet-option .especialidad {
-      font-size: 14px;
-      color: #1f8d92;
     }
   </style>
 </head>
@@ -187,33 +112,47 @@
   <main>
 
     <div class="contenido">
-      <div class="titulo" style="margin-top: 50px;">
+    
+     
+          <div class="contenido text-center">
+      <div class="bg-white rounded-4 p-5 sombra text-start" style="width: 100%; max-width: 1000px; font-size: 1.25rem;">
+        
+        <div class="titulo" style="margin-top: 5px;">
         <h1 style="font-weight: 600;">¡TURNO RESERVADO CON ÉXITO!</h1>
       </div>
 
-      <div class="contenido text-center">
+       <div class="detalles-turno">
+      <div class="detalles">
+        <p class="productosTotal fw-semibold">Mascota:
+          <span class="fw-bold texto-verde" id="resumen-mascota"></span>
+        </p>
+          <p class="envioValor fw-semibold">Motivo:
+          <span class="fw-bold texto-verde" id="resumen-motivo"></span>
+        </p>
+        <p class="envioValor fw-semibold">Observación de motivo:
+          <span class="fw-bold texto-verde" id="resumen-observacion"></span>
+        </p>
+        
 
+        </div>
 
-        <div class="contenido text-center">
-          <div class="bg-white rounded-4 p-5 sombra text-start"
-            style="width: 100%; max-width: 600px; font-size: 1.25rem;">
-            <p><strong>Tu turno:</strong></p>
-            <p class="productosTotal fw-semibold">Mascota:
-              <span class="fw-bold texto-verde" id="resumen-mascota"></span>
-            </p>
-            <p class="envioValor fw-semibold">Sede:
-              <span class="fw-bold texto-verde" id="resumen-sede"></span>
-            </p>
-            <p class="envioValor fw-semibold">Fecha y hora:
-              <span class="fw-bold texto-verde" id="resumen-fecha"></span>
-            </p>
-            <p class="envioValor fw-semibold">Veterinario:
-              <span class="fw-bold texto-verde" id="resumen-vet"></span>
-            </p>
-          </div>
+        <div class="detalles">
+       <p class="envioValor fw-semibold">Sede:
+          <span class="fw-bold texto-verde" id="resumen-sede"></span>
+        </p>
+        <p class="envioValor fw-semibold">Fecha y hora:
+          <span class="fw-bold texto-verde" id="resumen-fecha"></span>
+        </p>
+        <p class="envioValor fw-semibold">Veterinario:
+          <span class="fw-bold texto-verde" id="resumen-vet"></span>
+        </p>
+      </div>
+
+</div>
+      </div>
 
           <div class="botones-turno">
-            <a href="fechaHora.html" class="boton-turno">VOLVER</a>
+            <a href="fechaHora.html" class="boton-turno" id="volver">VOLVER AL INICIO</a>
             <button id="submit-btn" class="boton-turno">VER TURNOS</button>
           </div>
         </div>
@@ -253,6 +192,9 @@
       document.getElementById('resumen-sede').textContent = localStorage.getItem('sede') || 'No seleccionada';
       document.getElementById('resumen-fecha').textContent = localStorage.getItem('fecha') + ', ' + localStorage.getItem('hora') || 'No seleccionada';
       document.getElementById('resumen-vet').textContent = localStorage.getItem('veterinario') || 'No seleccionada';
+      document.getElementById('resumen-motivo').textContent = localStorage.getItem('motivoSelect') ;
+      document.getElementById('resumen-observacion').textContent = localStorage.getItem('motivoObservacion') || 'No seleccionada';
+    
     });
 
     // Al confirmar, podés ir a otra vista o limpiar datos

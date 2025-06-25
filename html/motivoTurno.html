@@ -85,10 +85,15 @@
 
 
 
-
+    /* Título a la izquierda */
+    .titulo-turnos h4 {
+      margin: 0 0 10px 0;
+      margin-left: 5px;
+      text-align: left;
+    }
 
     .botones-turno {
-      margin-top: 40px;
+      margin-top: 20px;
       display: flex;
       justify-content: space-between;
       width: 400px;
@@ -121,89 +126,90 @@
 
 
 
-
-    #mascota,
-    #sede,
-    #fecha-hora,
-    #motivo {
+  
+    #mascota {
       background-color: rgb(21, 227, 21);
     }
 
-    #veterinario {
+    #motivo {
       background-color: rgb(5, 135, 5);
     }
 
-    form {
-      display: flex;
-      justify-content: center;
-      /* centra los items en el contenedor */
-      gap: 20px;
-    }
-
-    /* Ocultar radios reales */
-    input[type="radio"] {
-      display: none;
-    }
-
-    /* Estilo para cada label que actúa como opción */
-
-    label.vet-option {
-      cursor: pointer;
-      border-radius: 20px;
-      padding: 15px;
-      flex: 1;
-      transition: background-color 0.3s;
-
-      /* Esto centra todo dentro del label */
+    #form-fechaHora {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      /* para que el texto también se centre */
+      gap: 20px;
+      margin-top: 20px;
+      align-self: center;
+      width: 100%;
+      padding: 0 20px;
     }
 
-    label.vet-option:hover {
-      background-color: var(--color-beige-claro);
-      border: solid 1px var(--color-principal);
-    }
-
-
-
-    /* Cuando radio está seleccionado, cambiar fondo */
-    input[type="radio"]:checked+label.vet-option {
-      background-color: var(--color-beige-claro);
-      color: #004747;
-      box-shadow: 0 0 15px var(--color-principal);
-    }
-
-    /* Imagen circular */
-    label.vet-option img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #2bc7cf;
-      margin-bottom: 10px;
-    }
-
-    /* Nombre y especialidad */
-    label.vet-option .nombre {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 5px;
-      color: #10787d;
+    .campo-fecha-hora {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
       font-family: sans-serif;
+      font-weight: bold;
+      color: var(--color-verde-oscuro);
     }
 
-    label.vet-option .especialidad {
-      font-size: 14px;
-      color: #1f8d92;
+    .campo-fecha-hora label {
+      color: var(--color-verde-oscuro);
+
+      margin-top: 10px;
     }
+
+    .campo-fecha-hora {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: white;
+    }
+
+      .campo-fecha-hora input {
+      width: 100%;
+      padding: 12px 16px 12px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 15px;
+      background-color: var(--color-beige-claro);
+      color: var(--color-verde-oscuro);
+      border: solid 1px var(--color-principal);
+      outline: none;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      background-size: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      appearance: none;
+    }
+    .campo-fecha-hora select {
+      width: 100%;
+      padding: 12px 16px 12px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 15px;
+      background-color: var(--color-beige-claro);
+      color: var(--color-verde-oscuro);
+      border: solid 1px var(--color-principal);
+      outline: none;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      background-size: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      appearance: none;
+    }
+
+
   </style>
 </head>
 
 <body class="fondo">
-  <nav class="navbar px-4 py-2">
+   <nav class="navbar px-4 py-2">
   <div class="container-fluid position-relative">
     <a class="navbar-brand p-3" href="../index.html">
       <img src="../img/logoPawCenter.png" width="200px" alt="">
@@ -241,8 +247,9 @@
   </div>
 </nav>
 
+
   <main>
-    <div class="pasos">
+      <div class="pasos">
       <p class="paso" id="mascota">MASCOTA</p>
       <p class="paso" id="motivo">MOTIVO</p>
       <p class="paso" id="sede">SEDE</p>
@@ -251,45 +258,41 @@
     </div>
     <div class="contenido">
       <div class="titulo">
-        <h1 style="font-weight: 600;">SELECCIONE VETERINARIO</h1>
+        <h1 style="font-weight: 600;">SELECCIONE MOTIVO DE CONSULTA</h1>
       </div>
+      <div class="turnos">
+        <div class="titulo-turnos">
+          <h4 style="font-weight: bold;">MOTIVO</h4>
+        </div>
+        <form id="form-motivo" action="sede.html" method="get">
+          <div class="campo-fecha-hora">
+            <label for="motivoSelect">Seleccionar motivo</label>
+            <select name="motivoSelect" id="motivoSelect" required>
+              <option value="">-- Seleccioná un motivo --</option>
+              <option value="General">General</option>
+              <option value="Dermatología">Dermatología</option>
+              <option value="Cirugía">Cirugía</option>
+            </select>
+          </div>
+
+          <div class="campo-fecha-hora">
+            <label for="motivoObservacion">Observaciones</label>
+           <input type="text" name="motivoObservacion" placeholder="Observaciones del motivo...">
+          </div>
+
+        </form>
 
 
-
-      <form id="form-veterinario" action="resumenTurno.html" method="get">
-
-        <input type="radio" name="veterinario" id="vet1" value="Dra. Ana Pérez" required />
-        <label class="vet-option" for="vet1">
-          <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez" />
-          <div class="nombre">Dra. Ana Pérez</div>
-          <div class="especialidad">Medicina General</div>
-        </label>
-
-        <input type="radio" name="veterinario" id="vet2" value="Dr. Carlos Gómez" />
-        <label class="vet-option" for="vet2">
-          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez" />
-          <div class="nombre">Dr. Carlos Gómez</div>
-          <div class="especialidad">Cirugía</div>
-        </label>
-
-        <input type="radio" name="veterinario" id="vet3" value="Dra. Laura Ruiz" />
-        <label class="vet-option" for="vet3">
-          <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz" />
-          <div class="nombre">Dra. Laura Ruiz</div>
-          <div class="especialidad">Dermatología</div>
-        </label>
-
-      </form>
-
-
+      </div>
 
 
       <div class="botones-turno">
-        <a href="fechaHora.html" class="boton-turno">VOLVER</a>
-        <button id="submit-btn" class="boton-turno">SIGUIENTE</button>
+        <a href="solicitarTurno.html" class="boton-turno">VOLVER</a>
+        <button id="submit-btn" type="button" class="boton-turno">SIGUIENTE</button>
       </div>
     </div>
   </main>
+
   <footer class="footer-puppet">
     <div class="container py-5">
       <div class="row align-items-center">
@@ -314,18 +317,22 @@
       </div>
     </div>
   </footer>
-
   <script>
-    document.getElementById('submit-btn').addEventListener('click', function () {
-      const form = document.getElementById('form-veterinario');
-      if (form.checkValidity()) {
-        const vetSeleccionado = document.querySelector('input[name="veterinario"]:checked').value;
-        localStorage.setItem('veterinario', vetSeleccionado);
-        form.submit();
-      } else {
-        form.reportValidity();
-      }
-    });
+
+   document.getElementById('submit-btn').addEventListener('click', function () {
+  const form = document.getElementById('form-motivo');
+  if (form.checkValidity()) {
+    const motivoSelect = document.getElementById('motivoSelect').value;
+    const motivoObservacion = document.querySelector('input[name="motivoObservacion"]').value;
+    
+    localStorage.setItem('motivoSelect', motivoSelect);
+    localStorage.setItem('motivoObservacion', motivoObservacion);
+    
+    form.submit(); // Esto enviará el formulario a veterinario.html
+  } else {
+    form.reportValidity();
+  }
+});
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
