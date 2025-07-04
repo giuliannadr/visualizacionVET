@@ -432,3 +432,7 @@ main {
     border: 3px solid var(--color-verde) !important;
     background-color: #fcffff !important;
 }
+
+.bg-amarillo-suave {
+  background-color: rgba(252, 170, 43, 0.15); 
+}
