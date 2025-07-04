@@ -152,6 +152,7 @@
       border-radius: 20px;
       padding: 15px;
       flex: 1;
+      
       transition: background-color 0.3s;
 
       /* Esto centra todo dentro del label */
@@ -265,17 +266,38 @@
           <div class="especialidad">Medicina General</div>
         </label>
 
-        <input type="radio" name="veterinario" id="vet2" value="Dr. Carlos Gómez" />
+               <input type="radio" name="veterinario" id="vet2" value="Dra. Ana Pérez" required />
         <label class="vet-option" for="vet2">
+          <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Dr. Martin Gimenez" />
+          <div class="nombre">Dr. Martin Gimenez</div>
+          <div class="especialidad">Medicina General</div>
+        </label>
+
+        <input type="radio" name="veterinario" id="vet3" value="Dr. Carlos Gómez" />
+        <label class="vet-option" for="vet3">
           <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez" />
           <div class="nombre">Dr. Carlos Gómez</div>
           <div class="especialidad">Cirugía</div>
         </label>
+       
+        <input type="radio" name="veterinario" id="vet4" value="Dra. Marcela Torrado" />
+        <label class="vet-option" for="vet4">
+          <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Dra. Marcela Torrado" />
+          <div class="nombre">Dra. Marcela Torrado</div>
+          <div class="especialidad">Cirugía</div>
+        </label>
 
-        <input type="radio" name="veterinario" id="vet3" value="Dra. Laura Ruiz" />
-        <label class="vet-option" for="vet3">
+        <input type="radio" name="veterinario" id="vet5" value="Dra. Laura Ruiz" />
+        <label class="vet-option" for="vet5">
           <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz" />
           <div class="nombre">Dra. Laura Ruiz</div>
+          <div class="especialidad">Dermatología</div>
+        </label>
+
+        <input type="radio" name="veterinario" id="vet6" value="Dra. Maria Dominguez" />
+        <label class="vet-option" for="vet6">
+          <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Dra. Maria Dominguez" />
+          <div class="nombre">Dra. Maria Dominguez</div>
           <div class="especialidad">Dermatología</div>
         </label>
 
@@ -326,6 +348,33 @@
         form.reportValidity();
       }
     });
+
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+  const motivo = localStorage.getItem('motivoSelect'); // e.g. "General", "Cirugía", "Dermatología"
+  if (!motivo) return; // si no hay motivo no filtramos
+
+  // Obtenemos todos los labels que tienen la clase .especialidad (en tu HTML, la especialidad está en <div class="especialidad">)
+  const vetOptions = document.querySelectorAll('.vet-option');
+
+  vetOptions.forEach(label => {
+    const especialidad = label.querySelector('.especialidad').textContent.trim();
+
+    // Si la especialidad incluye el motivo seleccionado, lo mostramos, sino ocultamos
+    if (especialidad.toLowerCase().includes(motivo.toLowerCase())) {
+      label.style.display = 'block';
+      // Habilitamos el input radio asociado
+      const radioId = label.getAttribute('for');
+      document.getElementById(radioId).disabled = false;
+    } else {
+      label.style.display = 'none';
+      // Deshabilitamos el input radio asociado para evitar selección
+      const radioId = label.getAttribute('for');
+      document.getElementById(radioId).disabled = true;
+    }
+  });
+});
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
