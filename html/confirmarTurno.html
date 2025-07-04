@@ -31,37 +31,41 @@
       text-align: left;
     }
 
-.botones-turno {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  width: 800px; /* Aumentado para que entre el nuevo ancho de los botones */
-  margin-left: auto;
-  margin-right: auto;
-  gap: 300px; /* Podés ajustar esto a gusto */
-}
-#volver{
-  background-color: #54acb1;
-}
+    .botones-turno {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      width: 800px;
+      /* Aumentado para que entre el nuevo ancho de los botones */
+      margin-left: auto;
+      margin-right: auto;
+      gap: 300px;
+      /* Podés ajustar esto a gusto */
+    }
 
-.boton-turno {
-  font-family: sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  background-color: #218c92;
-  padding: 15px;
-  border-radius: 25px;
-  color: white;
-  font-weight: bold;
-  width: 220px; /* Aumentado */
-  text-align: center;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
+    #volver {
+      background-color: #54acb1;
+    }
+
+    .boton-turno {
+      font-family: sans-serif;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: #218c92;
+      padding: 15px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      width: 220px;
+      /* Aumentado */
+      text-align: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
 
 
-    .detalles-turno{
+    .detalles-turno {
       margin-top: 40px;
       display: flex;
       flex-direction: row;
@@ -71,91 +75,94 @@
 </head>
 
 <body class="fondo">
-    <nav class="navbar px-4 py-2">
-  <div class="container-fluid position-relative">
-    <a class="navbar-brand p-3" href="../index.html">
-      <img src="../img/logoPawCenter.png" width="200px" alt="">
-    </a>
-
-    <div class="d-flex gap-3 align-items-center ms-auto">
-      <a href="../html/carrito.html" class="nav-link position-relative" id="icono-carrito">
-        <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
-        <span id="contador-carrito"
-              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-              style="font-size: 0.75rem; display:none;">0</span>
+  <nav class="navbar px-4 py-2">
+    <div class="container-fluid position-relative">
+      <a class="navbar-brand p-3" href="../index.html">
+        <img src="../img/logoPawCenter.png" width="200px" alt="">
       </a>
 
-      <a href="#" class="nav-link">
-        <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
-      </a>
+      <div class="d-flex gap-3 align-items-center ms-auto">
+        <a href="../html/carrito.html" class="nav-link position-relative" id="icono-carrito">
+          <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
+          <span id="contador-carrito"
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            style="font-size: 0.75rem; display:none;">0</span>
+        </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#menuResponsive" aria-controls="menuResponsive" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <a href="../html/miPerfil.html" class="nav-link">
+          <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+        </a>
+
+        <!-- Botón para abrir menú offcanvas desde la derecha -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+          aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
     </div>
-  </div>
+  </nav>
 
-  <!-- Menú hamburguesa centrado y horizontal -->
-  <div class="collapse w-100" id="menuResponsive">
-    <div class="d-flex justify-content-center">
-      <ul class="navbar-nav flex-row gap-4 py-3">
-        <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Turnos</a></li>
+  <!-- Offcanvas menú desde la derecha -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Mis Turnos</a></li>
         <li class="nav-item"><a class="nav-link fw-bold" href="/html/tienda.html">Tienda</a></li>
         <li class="nav-item"><a class="nav-link fw-bold" href="#">Tips</a></li>
       </ul>
     </div>
   </div>
-</nav>
 
   <main>
 
     <div class="contenido">
-    
-     
-          <div class="contenido text-center">
-      <div class="bg-white rounded-4 p-5 sombra text-start" style="width: 100%; max-width: 1000px; font-size: 1.25rem;">
-        
-        <div class="titulo" style="margin-top: 5px;">
-        <h1 style="font-weight: 600;">¡TURNO RESERVADO CON ÉXITO!</h1>
-      </div>
+      <div class="contenido text-center">
+        <div class="bg-white rounded-4 p-5 sombra text-start"
+          style="width: 100%; max-width: 1000px; font-size: 1.25rem;">
 
-       <div class="detalles-turno">
-      <div class="detalles">
-        <p class="productosTotal fw-semibold">Mascota:
-          <span class="fw-bold texto-verde" id="resumen-mascota"></span>
-        </p>
-          <p class="envioValor fw-semibold">Motivo:
-          <span class="fw-bold texto-verde" id="resumen-motivo"></span>
-        </p>
-        <p class="envioValor fw-semibold">Observación de motivo:
-          <span class="fw-bold texto-verde" id="resumen-observacion"></span>
-        </p>
-        
+          <div class="titulo" style="margin-top: 5px;">
+            <h1 style="font-weight: 600;">¡TURNO RESERVADO CON ÉXITO!</h1>
+          </div>
 
-        </div>
+          <div class="detalles-turno">
+            <div class="detalles">
+              <p class="productosTotal fw-semibold">Mascota:
+                <span class="fw-bold texto-verde" id="resumen-mascota"></span>
+              </p>
+              <p class="envioValor fw-semibold">Motivo:
+                <span class="fw-bold texto-verde" id="resumen-motivo"></span>
+              </p>
+              <p class="envioValor fw-semibold">Observación de motivo:
+                <span class="fw-bold texto-verde" id="resumen-observacion"></span>
+              </p>
 
-        <div class="detalles">
-       <p class="envioValor fw-semibold">Sede:
-          <span class="fw-bold texto-verde" id="resumen-sede"></span>
-        </p>
-        <p class="envioValor fw-semibold">Fecha y hora:
-          <span class="fw-bold texto-verde" id="resumen-fecha"></span>
-        </p>
-        <p class="envioValor fw-semibold">Veterinario:
-          <span class="fw-bold texto-verde" id="resumen-vet"></span>
-        </p>
-      </div>
 
-</div>
-      </div>
+            </div>
 
-          <div class="botones-turno">
-            <a href="fechaHora.html" class="boton-turno" id="volver">VOLVER AL INICIO</a>
-            <button id="submit-btn" class="boton-turno">VER TURNOS</button>
+            <div class="detalles">
+              <p class="envioValor fw-semibold">Sede:
+                <span class="fw-bold texto-verde" id="resumen-sede"></span>
+              </p>
+              <p class="envioValor fw-semibold">Fecha y hora:
+                <span class="fw-bold texto-verde" id="resumen-fecha"></span>
+              </p>
+              <p class="envioValor fw-semibold">Veterinario:
+                <span class="fw-bold texto-verde" id="resumen-vet"></span>
+              </p>
+            </div>
+
           </div>
         </div>
+
+        <div class="botones-turno">
+          <a href="fechaHora.html" class="boton-turno" id="volver">VOLVER AL INICIO</a>
+          <button id="submit-btn" class="boton-turno">VER TURNOS</button>
+        </div>
+      </div>
   </main>
   <footer class="footer-puppet">
     <div class="container py-5">
@@ -192,9 +199,9 @@
       document.getElementById('resumen-sede').textContent = localStorage.getItem('sede') || 'No seleccionada';
       document.getElementById('resumen-fecha').textContent = localStorage.getItem('fecha') + ', ' + localStorage.getItem('hora') || 'No seleccionada';
       document.getElementById('resumen-vet').textContent = localStorage.getItem('veterinario') || 'No seleccionada';
-      document.getElementById('resumen-motivo').textContent = localStorage.getItem('motivoSelect') ;
+      document.getElementById('resumen-motivo').textContent = localStorage.getItem('motivoSelect');
       document.getElementById('resumen-observacion').textContent = localStorage.getItem('motivoObservacion') || 'No seleccionada';
-    
+
     });
 
     // Al confirmar, podés ir a otra vista o limpiar datos
