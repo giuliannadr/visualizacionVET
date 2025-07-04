@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Turnos</title>
+    <link rel="icon" type="image/png" href="../img/patita.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilo-principal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="fondo">
+    <nav class="navbar px-4 py-2">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand p-3" href="../index.html">
+                <img src="../img/logoPawCenter.png" width="200px" alt="">
+            </a>
+
+            <div class="d-flex gap-3 align-items-center ms-auto">
+                <a href="../html/carrito.html" class="nav-link position-relative" id="icono-carrito">
+                    <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
+                    <span id="contador-carrito"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 0.75rem; display:none;">0</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                </a>
+
+                <!-- Botón para abrir menú offcanvas desde la derecha -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                    aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas menú desde la derecha -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Mis Turnos</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="/html/tienda.html">Tienda</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">Tips</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="d-flex flex-column justify-content-center p-5">
+        <section>
+            <article class="card shadow-sm d-flex flex-column flex-md-row p-3 rounded-4">
+                <div class="d-flex flex-column me-md-3 mb-3 mb-md-0 order-2 order-md-1" style="max-width: 450px;">
+                    <img src="../img/perroabrigadou.png" class="img-fluid mb-2 rounded-4" alt="...">
+                    <div class="d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
+                            <i class="bi bi-thermometer-half text-primary fs-5"></i>
+                            <small class="fw-semibold">Mantén a tu mascota calentita y feliz</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
+                            <i class="bi bi-heart text-danger fs-5"></i>
+                            <small class="fw-semibold">Protege su salud con ropa adecuada</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
+                            <i class="bi bi-shield-check text-success fs-5"></i>
+                            <small class="fw-semibold">Evita resfriados y problemas respiratorios</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
+                            <i class="bi bi-arrow-repeat text-info fs-5"></i>
+                            <small class="fw-semibold">Usa prendas que permitan movilidad y confort</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-grow-1 p-3 d-flex flex-column gap-2 order-1 order-md-2">
+                    <h5 class="card-title fw-bold fs-4 mb-2 texto-verde">
+                        ¿Sabías que tu mascota puede necesitar abrigo si la temperatura baja de 5°C?
+                    </h5>
+
+                    <p class="fs-5 fw-semibold texto-principal mb-2">
+                        ¡No dejes que el frío afecte la salud de tu mejor amigo!
+                    </p>
+                    <p class="mb-2">
+                        El frío intenso puede causar problemas serios en perros y gatos, especialmente si no están
+                        protegidos.
+                    </p>
+                    <p class="mb-2">
+                        Al igual que nosotros, algunos perros y gatos sufren el frío, especialmente los de pelo corto.
+                        Cuando la temperatura baja de 5°C, pueden perder calor hasta <strong>5 veces más rápido</strong>
+                        que
+                        las personas, lo que afecta su salud y bienestar.
+                    </p>
+
+                    <p class="mb-2">
+                        El <strong>abrigo</strong> no solo protege del frío, sino que también ayuda a prevenir
+                        enfermedades
+                        comunes durante el invierno, como <strong>resfriados</strong>, <strong>infecciones
+                            respiratorias</strong> y <strong>problemas articulares</strong>.
+                    </p>
+
+                    <ul class="list-group list-group-flush mb-3" style="list-style: none;">
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Mantener a tu mascota seca es
+                            fundamental.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Evita exposiciones prolongadas al
+                            frío,
+                            especialmente en paseos.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Observá signos como temblores o
+                            letargo, que indican que tiene frío.</li>
+                    </ul>
+
+                    <p class="mb-2">
+                        Elegí prendas adecuadas según la raza y tamaño de tu mascota. Un abrigo bien ajustado pero
+                        cómodo es
+                        clave para su bienestar.
+                    </p>
+                    <p class="mb-0">
+                        Las mascotas mayores o con condiciones especiales necesitan cuidados extra durante el frío, así
+                        que
+                        consultá siempre con tu veterinario.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="d-flex flex-column align-items-center justify-content-center p-4 p-md-2">
+            <div class="container p-4 p-md-5 text-center">
+                <h2 class="fw-bold fs-md-2 mb-5" style="color: var(--color-verde-oscuro);">TAMBIÉN TE RECOMENDAMOS:
+                </h2>
+                <!-- SLIDER PARA CELULARES -->
+                <div class="d-block d-lg-none px-3">
+                    <div class="swiper mySwiper-tips">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+
+                                <article class="card shadow-sm h-100">
+                                    <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que tu mascota puede
+                                        necesitar
+                                        abrigo si la
+                                        temperatura baja de 5°C?</h5>
+                                    <img src="../img/perroabrigadou.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column justify-content-between text-center">
+                                        <p class="card-text">Al igual que nosotros, algunos perros y gatos sufren el
+                                            frío,
+                                            especialmente los de pelo corto.</p>
+                                        <a href="#" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
+                                    </div>
+                                </article>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <article class="card shadow-sm h-100">
+                                    <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que los gatos también
+                                        necesitan
+                                        ir al
+                                        veterinario aunque parezcan sanos?</h5>
+                                    <img src="../img/gatoEnElVet.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column justify-content-between text-center">
+                                        <p class="card-text">Ocultan muy bien el dolor, por eso es clave llevarlos a
+                                            controles
+                                            anuales.</p>
+                                        <a href="#" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card shadow-sm h-100">
+                                    <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que los perros entienden
+                                        tu tono
+                                        de voz más
+                                        que tus palabras?</h5>
+                                    <img src="../img/perroEscuchando.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column justify-content-between text-center">
+                                        <p class="card-text">Usar un tono firme pero amigable mejora la comunicación y
+                                            la
+                                            obediencia.</p>
+                                        <a href="#" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-tips mt-4"></div>
+                </div>
+                <!-- GRILLA -->
+                <div class="row g-5 d-none d-lg-flex">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card shadow-sm h-100">
+                            <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que tu mascota puede necesitar
+                                abrigo si la
+                                temperatura baja de 5°C?</h5>
+                            <img src="../img/perroabrigadou.png" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-between text-center">
+                                <p class="card-text">Al igual que nosotros, algunos perros y gatos sufren el frío,
+                                    especialmente los de pelo corto.</p>
+
+                                <a href="#" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card shadow-sm h-100">
+                            <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que los gatos también necesitan
+                                ir al
+                                veterinario aunque parezcan sanos?</h5>
+                            <img src="../img/gatoEnElVet.png" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-between text-center">
+                                <p class="card-text">Ocultan muy bien el dolor, por eso es clave llevarlos a controles
+                                    anuales.</p>
+
+                                <a href="#" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card shadow-sm h-100">
+                            <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que los perros entienden tu tono
+                                de voz más
+                                que tus palabras?</h5>
+                            <img src="../img/perroEscuchando.png" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-between text-center">
+                                <p class="card-text">Usar un tono firme pero amigable mejora la comunicación y la
+                                    obediencia.</p>
+
+                                <a href="#" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-puppet">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <a class="logo-footer" href="#">
+                        <a class="navbar-brand" href="../index.html">
+                            <img src="../img/logoPawCenter.png" width="200px" alt="">
+                        </a>
+                    </a>
+                    <p class="slogan-footer fw-semibold">Cuidamos a tu mascota todo el año</p>
+                </div>
+                <div class="col-md-8">
+                    <ul class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end gap-4">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Turnos</a></li>
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Tips</a></li>
+                        <li><a href="#">Mi Perfil</a></li>
+                        <li><a href="#">Carrito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper(".mySwiper-tips", {
+            spaceBetween: 16,
+            pagination: {
+                el: ".swiper-pagination-tips",
+                clickable: true,
+            },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

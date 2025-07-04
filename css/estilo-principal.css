@@ -289,7 +289,8 @@ body {
     margin: 50px auto 0 auto;
     border-radius: 40px;
     overflow: hidden;
-    flex-wrap: wrap; /* Para que los items puedan bajar si no hay espacio */
+    flex-wrap: wrap;
+    /* Para que los items puedan bajar si no hay espacio */
 }
 
 .pasos p {
@@ -318,13 +319,16 @@ body {
     .pasos {
         flex-direction: column;
         gap: 10px;
-        width: 90vw;  /* que tome casi todo el ancho */
+        width: 90vw;
+        /* que tome casi todo el ancho */
         margin: 20px auto;
         border-radius: 20px;
         padding: 15px;
     }
+
     .paso {
-        width: 100%;  /* ocupa todo el ancho del contenedor */
+        width: 100%;
+        /* ocupa todo el ancho del contenedor */
         font-size: 14px;
         padding: 10px;
         border-radius: 15px;
@@ -371,7 +375,6 @@ main {
 }
 
 .sede-btn {
-    /* estilos base */
     cursor: pointer;
     background-color: var(--color-beige-claro);
     color: var(--color-verde-oscuro);
@@ -386,7 +389,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
 .sede-btn:hover {
@@ -397,25 +403,36 @@ main {
 
 
 .sede-btn input[type="radio"] {
-  opacity: 0;
-  position: absolute;
-  pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
 }
 
 
 .sede-btn.selected {
-    background-color: var(--color-principal);
-    color: var(--color-verde-oscuro);
+    background-color: var(--color-verde);
+    color: white;
     box-shadow: 0 0 15px var(--color-beige-claro);
-}
-#form-sede {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  margin-bottom: 40px;
+    border-color: var(--color-verde-oscuro);
 }
 
-.color-black{
+#form-sede {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.color-black {
     color: black;
+}
+
+.contenedor-verde {
+    border: 3px solid var(--color-verde) !important;
+    background-color: #fcffff !important;
+}
+
+.bg-amarillo-suave {
+  background-color: rgba(252, 170, 43, 0.15); 
 }

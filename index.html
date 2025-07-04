@@ -11,17 +11,30 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/estilo-principal.css">
+
+    <style>
+        main {
+            padding-top: 40px;
+        }
+
+        @media (max-width: 991px) {
+            main {
+                padding-top:
+                    100px !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="fondo">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <nav class="navbar px-4 py-2">
+    <nav class="navbar fixed-top px-4 py-2">
         <div class="container-fluid position-relative">
             <a class="navbar-brand p-3" href="../index.html">
-                <img src="img/logoPawCenter.png" width="200px" alt="">
+                <img src="../img/logoPawCenter.png" width="200px" alt="">
             </a>
-       
+
             <div class="d-flex gap-3 align-items-center ms-auto">
                 <a href="../html/carrito.html" class="nav-link position-relative" id="icono-carrito">
                     <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
@@ -30,31 +43,35 @@
                         style="font-size: 0.75rem; display:none;">0</span>
                 </a>
 
-      <a href="#" class="nav-link">
-        <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
-      </a>
+                <a href="html/login.html" class="nav-link">
+                    <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#menuResponsive" aria-controls="menuResponsive" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+                <!-- Botón para abrir menú offcanvas desde la derecha -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                    aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas menú desde la derecha -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Mis Turnos</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="/html/tienda.html">Tienda</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="/html/tips.html">Tips</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
 
-  <!-- Menú hamburguesa centrado y horizontal -->
-  <div class="collapse w-100" id="menuResponsive">
-    <div class="d-flex justify-content-center">
-      <ul class="navbar-nav flex-row gap-4 py-3">
-        <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Turnos</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold" href="/html/tienda.html">Tienda</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold" href="#">Tips</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-    <main>
+    <main class="">
         <!-- TURNO -->
         <section class="container-lg mt-5">
             <div class="row align-items-center justify-content-center">
@@ -137,8 +154,9 @@
             <div class="container bg-white rounded sombra p-4 p-md-5">
                 <div
                     class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100 mb-4 px-3 px-md-5">
-                    <h2 class="fw-bold fs-md-2" style="color: var(--color-verde-oscuro);">¿Sabías esto sobre tu mascota?</h2>
-                    <a class="btn btn-color fw-semibold mt-3 mt-md-0" href="#">EXPLORAR TIPS</a>
+                    <h2 class="fw-bold fs-md-2" style="color: var(--color-verde-oscuro);">¿Sabías esto sobre tu mascota?
+                    </h2>
+                    <a class="btn btn-color fw-semibold mt-3 mt-md-0" href="/html/tips.html">EXPLORAR TIPS</a>
                 </div>
                 <!-- SLIDER PARA CELULARES -->
                 <div class="d-block d-lg-none px-3">
@@ -148,15 +166,16 @@
                             <div class="swiper-slide">
 
                                 <article class="card shadow-sm h-100">
+                                    <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que tu mascota puede
+                                        necesitar
+                                        abrigo si la
+                                        temperatura baja de 5°C?</h5>
                                     <img src="img/perroabrigadou.png" class="card-img-top" alt="...">
                                     <div class="card-body d-flex flex-column justify-content-between text-center">
-                                        <h5 class="card-title fw-bold fs-6">¿Sabías que tu mascota puede necesitar
-                                            abrigo si la
-                                            temperatura baja de 5°C?</h5>
                                         <p class="card-text">Al igual que nosotros, algunos perros y gatos sufren el
                                             frío,
                                             especialmente los de pelo corto.</p>
-                                        <a href="#" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
+                                        <a href="/html/detalletip.html" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
                                     </div>
                                 </article>
 
@@ -164,12 +183,12 @@
                             <div class="swiper-slide">
 
                                 <article class="card shadow-sm h-100">
+                                    <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que los gatos también
+                                        necesitan
+                                        ir al
+                                        veterinario aunque parezcan sanos?</h5>
                                     <img src="img/gatoEnElVet.png" class="card-img-top" alt="...">
-
                                     <div class="card-body d-flex flex-column justify-content-between text-center">
-                                        <h5 class="card-title fw-bold fs-6">¿Sabías que los gatos también necesitan ir
-                                            al
-                                            veterinario aunque parezcan sanos?</h5>
                                         <p class="card-text">Ocultan muy bien el dolor, por eso es clave llevarlos a
                                             controles
                                             anuales.</p>
@@ -179,11 +198,12 @@
                             </div>
                             <div class="swiper-slide">
                                 <article class="card shadow-sm h-100">
+                                    <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que los perros entienden
+                                        tu tono
+                                        de voz más
+                                        que tus palabras?</h5>
                                     <img src="img/perroEscuchando.png" class="card-img-top" alt="...">
                                     <div class="card-body d-flex flex-column justify-content-between text-center">
-                                        <h5 class="card-title fw-bold fs-6">¿Sabías que los perros entienden tu tono de
-                                            voz más
-                                            que tus palabras?</h5>
                                         <p class="card-text">Usar un tono firme pero amigable mejora la comunicación y
                                             la
                                             obediencia.</p>
@@ -199,25 +219,25 @@
                 <div class="row g-4 px-3 px-md-5 d-none d-lg-flex">
                     <div class="col-12 col-md-6 col-lg-4">
                         <article class="card shadow-sm h-100">
+                            <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que tu mascota puede necesitar
+                                abrigo si la
+                                temperatura baja de 5°C?</h5>
                             <img src="img/perroabrigadou.png" class="card-img-top" alt="...">
                             <div class="card-body d-flex flex-column justify-content-between text-center">
-
-                                <h5 class="card-title fw-bold fs-6">¿Sabías que tu mascota puede necesitar abrigo si la
-                                    temperatura baja de 5°C?</h5>
                                 <p class="card-text">Al igual que nosotros, algunos perros y gatos sufren el frío,
                                     especialmente los de pelo corto.</p>
 
-                                <a href="#" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
+                                <a href="/html/detalletip.html" class="btn btn-color btn-sm fw-semibold">LEER MÁS</a>
                             </div>
                         </article>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <article class="card shadow-sm h-100">
+                            <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que los gatos también necesitan
+                                ir al
+                                veterinario aunque parezcan sanos?</h5>
                             <img src="img/gatoEnElVet.png" class="card-img-top" alt="...">
                             <div class="card-body d-flex flex-column justify-content-between text-center">
-
-                                <h5 class="card-title fw-bold fs-6">¿Sabías que los gatos también necesitan ir al
-                                    veterinario aunque parezcan sanos?</h5>
                                 <p class="card-text">Ocultan muy bien el dolor, por eso es clave llevarlos a controles
                                     anuales.</p>
 
@@ -227,11 +247,11 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <article class="card shadow-sm h-100">
+                            <h5 class="card-title text-center p-3 fw-bold fs-6">¿Sabías que los perros entienden tu tono
+                                de voz más
+                                que tus palabras?</h5>
                             <img src="img/perroEscuchando.png" class="card-img-top" alt="...">
                             <div class="card-body d-flex flex-column justify-content-between text-center">
-
-                                <h5 class="card-title fw-bold fs-6">¿Sabías que los perros entienden tu tono de voz más
-                                    que tus palabras?</h5>
                                 <p class="card-text">Usar un tono firme pero amigable mejora la comunicación y la
                                     obediencia.</p>
 
@@ -246,107 +266,112 @@
         <!-- VETERINARIOS -->
         <section class="d-flex flex-column align-items-center justify-content-center p-4 p-md-5"
             style="margin-top: 100px">
-            <h2 class="mb-5 fs-1 fw-bold fs-md-3 " style="color: var(--color-verde-oscuro);">NUESTROS VETERINARIOS</h2>
+            <div class="container bg-white rounded sombra text-center p-4 p-md-5">
+                <h2 class="mb-5 fs-1 fw-bold fs-md-3 " style="color: var(--color-verde-oscuro);">NUESTROS VETERINARIOS
+                </h2>
 
-            <h4  style="color: var(--color-verde); margin-bottom: 20px;">Filtrar por sede:</h4>
-                    <form id="form-sede" action="fechaHora.html" method="get">
-          <label class="sede-btn">
-            <input type="radio" name="sede" value="Av. Rivadavia 16284, Morón" required />
-            Av. Rivadavia 16284, Morón
-          </label>
+                <h4 style="color: var(--color-verde); margin-bottom: 20px;">Filtrar por sede:</h4>
+                <form id="form-sede" action="fechaHora.html" method="get">
+                    <label class="sede-btn">
+                        <input type="radio" name="sede" value="Av. Rivadavia 16284, Morón" required />
+                        Av. Rivadavia 16284, Morón
+                    </label>
 
-          <label class="sede-btn">
-            <input type="radio" name="sede" value="Juncal 177, Ituzaingó" />
-            Juncal 177, Ituzaingó
-          </label>
+                    <label class="sede-btn">
+                        <input type="radio" name="sede" value="Juncal 177, Ituzaingó" />
+                        Juncal 177, Ituzaingó
+                    </label>
 
-          <label class="sede-btn">
-            <input type="radio" name="sede" value="Av. de Mayo 449, Ramos Mejía" />
-            Av. de Mayo 449, Ramos Mejía
-          </label>
-        </form>
+                    <label class="sede-btn">
+                        <input type="radio" name="sede" value="Av. de Mayo 449, Ramos Mejía" />
+                        Av. de Mayo 449, Ramos Mejía
+                    </label>
+                </form>
 
-            <!-- Slider para pantallas pequeñas -->
-            <div class="d-block d-lg-none px-3" style="max-width: 400px; margin: 0 ;">
-                <div class="swiper mySwiper-vets">
-                    <div class="swiper-wrapper">
-                        <!-- Slides veterinarios (igual que antes) -->
-                        <div class="swiper-slide">
-                            <article class="card p-4 sombra text-center border-0 h-100">
-                                <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez"
-                                    class="mx-auto rounded-circle mb-3"
-                                    style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
-                                <div class="card-body p-0">
-                                    <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Ana Pérez</h5>
-                                    <p class="card-text text-muted mb-0">Medicina General</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="card p-4 sombra text-center border-0 h-100">
-                                <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez"
-                                    class="mx-auto rounded-circle mb-3"
-                                    style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
-                                <div class="card-body p-0">
-                                    <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dr. Carlos Gómez</h5>
-                                    <p class="card-text text-muted mb-0">Cirugía</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="card p-4 sombra text-center border-0 h-100">
-                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz"
-                                    class="mx-auto rounded-circle mb-3"
-                                    style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
-                                <div class="card-body p-0">
-                                    <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Laura Ruiz</h5>
-                                    <p class="card-text text-muted mb-0">Dermatología</p>
-                                </div>
-                            </article>
+                <!-- Slider para pantallas pequeñas -->
+                <div class="d-block d-lg-none px-3 mx-auto" style="max-width: 400px;">
+                    <div class="swiper mySwiper-vets">
+                        <div class="swiper-wrapper">
+                            <!-- Slides veterinarios (igual que antes) -->
+                            <div class="swiper-slide">
+                                <article class="card contenedor-verde p-4 sombra text-center border-0 h-100">
+                                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez"
+                                        class="mx-auto rounded-circle mb-3"
+                                        style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                                    <div class="card-body p-0">
+                                        <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Ana Pérez</h5>
+                                        <p class="card-text text-muted mb-0">Medicina General</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card contenedor-verde p-4 sombra text-center border-0 h-100">
+                                    <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez"
+                                        class="mx-auto rounded-circle mb-3"
+                                        style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                                    <div class="card-body p-0">
+                                        <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dr. Carlos Gómez</h5>
+                                        <p class="card-text text-muted mb-0">Cirugía</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card contenedor-verde p-4 sombra text-center border-0 h-100">
+                                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz"
+                                        class="mx-auto rounded-circle mb-3"
+                                        style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                                    <div class="card-body p-0">
+                                        <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Laura Ruiz</h5>
+                                        <p class="card-text text-muted mb-0">Dermatología</p>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination swiper-pagination-vets mt-4"></div>
                 </div>
-                <div class="swiper-pagination swiper-pagination-vets mt-4"></div>
-            </div>
 
-            <!-- Grilla para pantallas grandes -->
-            <div class="row g-4 px-3 px-md-5 d-none d-lg-flex" style="max-width: 1200px; width: 100%;">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card p-4 sombra text-center border-0 h-100">
-                        <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez"
-                            class="mx-auto rounded-circle mb-3"
-                            style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
-                        <div class="card-body p-0" style="color: var(--color-verde-oscuro);">
-                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6" >Dra. Ana Pérez</h5>
-                            <p class="card-text text-muted mb-0" >Medicina General</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card p-4 sombra text-center border-0 h-100">
-                        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez"
-                            class="mx-auto rounded-circle mb-3"
-                            style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
-                        <div class="card-body p-0">
-                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6"  style="color: var(--color-verde-oscuro);">Dr. Carlos Gómez</h5>
-                            <p class="card-text text-muted mb-0"  style="color: var(--color-verde-oscuro);">Cirugía</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card p-4 sombra text-center border-0 h-100">
-                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz"
-                            class="mx-auto rounded-circle mb-3"
-                            style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
-                        <div class="card-body p-0">
-                            <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Laura Ruiz</h5>
-                            <p class="card-text text-muted mb-0">Dermatología</p>
-                        </div>
-                    </article>
+                <!-- Grilla para pantallas grandes -->
+                <div class="row g-4 px-3 px-md-5 d-none d-lg-flex" style="max-width: 1200px; width: 100%;">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card contenedor-verde p-4 sombra text-center border-0 h-100">
+                            <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Dra. Ana Pérez"
+                                class="mx-auto rounded-circle mb-3"
+                                style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                            <div class="card-body p-0" style="color: var(--color-verde-oscuro);">
+                                <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Ana Pérez</h5>
+                                <p class="card-text text-muted mb-0">Medicina General</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card contenedor-verde p-4 sombra text-center border-0 h-100">
+                            <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Dr. Carlos Gómez"
+                                class="mx-auto rounded-circle mb-3"
+                                style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                            <div class="card-body p-0">
+                                <h5 class="card-title fw-bold mt-3 mb-1 fs-6" style="color: var(--color-verde-oscuro);">
+                                    Dr.
+                                    Carlos Gómez</h5>
+                                <p class="card-text text-muted mb-0" style="color: var(--color-verde-oscuro);">Cirugía
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card contenedor-verde p-4 sombra text-center border-0 h-100">
+                            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Dra. Laura Ruiz"
+                                class="mx-auto rounded-circle mb-3"
+                                style="background-color: rgb(255, 184, 126); width: 150px; height: 150px; object-fit: cover;">
+                            <div class="card-body p-0">
+                                <h5 class="card-title fw-bold mt-3 mb-1 fs-6">Dra. Laura Ruiz</h5>
+                                <p class="card-text text-muted mb-0">Dermatología</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
-
     </main>
     <footer class="footer-puppet">
         <div class="container py-5">
@@ -400,20 +425,25 @@
         });
     </script>
     <script>
-  document.querySelectorAll('.sede-btn input[type="radio"]').forEach(function (radio) {
-    radio.addEventListener('change', function () {
-      document.querySelectorAll('.sede-btn').forEach(function (label) {
-        label.classList.remove('selected');
-      });
-      this.parentElement.classList.add('selected');
-    });
-  });
-</script>
+        document.querySelectorAll('.sede-btn input[type="radio"]').forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                document.querySelectorAll('.sede-btn').forEach(function (label) {
+                    label.classList.remove('selected');
+                });
+                this.parentElement.classList.add('selected');
+            });
+        });
+    </script>
 
-    <script src="js/productosDestacados.js"></script>
+    <script src="js/carrito.js"></script> <!-- Primero -->
+    <script src="js/productosDestacados.js"></script> <!-- Después -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
-</body>
+
+    <script>
+        actualizarContadorCarrito();
+    </script>
+
 
 </html>
