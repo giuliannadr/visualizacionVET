@@ -214,6 +214,23 @@
     main {
         flex: 1;
     }
+
+    .info{
+        background-color: var(--color-beige-claro);
+        padding: 10px 15px;
+        border-radius: 25px;
+        color: var(--color-verde-oscuro);
+        border: solid 2px var(--color-principal);
+    }
+
+    .turnos-scrollable {
+  flex-grow: 1;
+  max-height: 300px; /* ajustá el alto que quieras */
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 10px; /* para que no tape el scrollbar el contenido */
+}
+
 </style>
 
 <body class="fondo">
@@ -259,53 +276,27 @@
         </div>
     </div>
     <main class="mt-5 pt-4">
-        <div class="container mt-5 pb-5">
+        <div class="container pb-5">
             <h2 class="text-center mb-4 texto-verde py-2 rounded">MASCOTA: Loki</h2>
 
-            <!-- Fila con flex y estiramiento igual -->
-            <div class="row mb-4 align-items-stretch">
-                <div class="col-md-6 mb-3 d-flex flex-column">
-                    <div class="card p-3 flex-grow-1">
-                        <h5 class="card-title texto-verde">DATOS MASCOTA</h5>
-                        <div class="mb-2">
-                            <label class="form-label">Nombre</label>
-                            <input type="text" class="form-control" placeholder="Loki" disabled>
-                        </div>
-                        <div class="mb-2">
-                            <label class="form-label">Edad</label>
-                            <input type="text" class="form-control" placeholder="8" disabled>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Especie</label>
-                            <input type="text" class="form-control" placeholder="Perro" disabled>
-                        </div>
-                        <button class="btn btn-color mt-auto">EDITAR DATOS</button>
-                    </div>
-                </div>
-
-                <!-- Próximos Turnos -->
-                <div class="col-md-6 mb-3 d-flex flex-column">
-                    <div class="card turnos-perfil p-3 flex-grow-1 d-flex flex-column">
-                        <div class="titulo-turnos">
-                            <h4>PRÓXIMOS TURNOS</h4>
-                        </div>
-
-                        <!-- Contenido dinámico aquí, por ejemplo detalles de turnos -->
-
-                        <div class="botones-turno mt-auto">
-                            <a href="solicitarTurno.html" class="boton-turno">SOLICITAR TURNO</a>
-                            <a href="historialTurnos.html" class="boton-turno">VER HISTORIAL</a>
-                        </div>
-                    </div>
+          <!-- Fila con flex y estiramiento igual -->
+<div class="row mb-4 align-items-stretch">
+    <div class="col-md-6 mb-3 d-flex flex-column">
+        <div class="card p-3 flex-grow-1 d-flex flex-column">
+            <div class="card-header bg-transparent border-0">
+               <div class="titulo-turnos">
+                   <h4>CARTILLA MÉDICA</h4>
+             
+               </div>
+                <div class="d-flex flex-wrap gap-4">
+                    <div class="info"><strong>Nombre:</strong> Loki</div>
+                    <div class="info"><strong>Edad:</strong> 8</div>
+                    <div class="info"><strong>Especie:</strong> Perro</div>
                 </div>
             </div>
 
-            <!-- Cartilla Médica -->
-            <div class="card shadow p-3">
-                <div class="card-header bg-transparent border-0">
-                    <h5 class="card-title texto-verde fw-bold mb-3">CARTILLA MÉDICA</h5>
-                </div>
-
+            <!-- Lista con scroll -->
+            <div style="max-height: 250px; overflow-y: auto;" class="pe-2 mt-3">
                 <ul class="list-group list-group-flush">
                     <!-- Vacunas -->
                     <li class="list-group-item bg-light rounded mb-2">
@@ -355,11 +346,38 @@
                         <p class="mb-0 text-dark" style="margin-left: 30px;">Castración (10-03-2023)</p>
                     </li>
                 </ul>
-
-                <div class="card-footer bg-transparent border-0 text-center mt-3">
-                    <button class="btn btn-color w-100 w-md-auto">VER CARTILLA COMPLETA</button>
-                </div>
             </div>
+
+            <!-- Botón fuera del scroll -->
+            <div class="card-footer bg-transparent border-0 text-center mt-3">
+                <button class="btn btn-color w-100 w-md-auto">VER CARTILLA COMPLETA</button>
+            </div>
+        </div>
+    </div>
+
+
+                <!-- Próximos Turnos -->
+<div class="col-md-6 mb-3 d-flex flex-column">
+  <div class="card turnos-perfil p-3 flex-grow-1 d-flex flex-column">
+    <div class="titulo-turnos">
+      <h4>PRÓXIMOS TURNOS</h4>
+    </div>
+
+    <!-- Contenedor scrollable para los turnos -->
+    <div class="turnos-scrollable">
+      <!-- Aquí se insertan dinámicamente los <details> de los turnos -->
+    </div>
+
+    <div class="botones-turno mt-auto">
+      <a href="solicitarTurno.html" class="boton-turno">SOLICITAR TURNO</a>
+      <a href="historialTurnos.html" class="boton-turno">VER HISTORIAL</a>
+    </div>
+  </div>
+</div>
+
+
+           
+            
         </div>
     </main>
     <footer class="footer-puppet">
@@ -388,7 +406,8 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const contenedorTurnos = document.querySelector(".turnos-perfil");
+            const contenedorTurnos = document.querySelector(".turnos-scrollable");
+
             let turnosGuardados = JSON.parse(localStorage.getItem("turnos")) || [];
 
             // Mostrar los turnos actuales
@@ -397,10 +416,10 @@
                 details.className = "item-turno";
 
                 const summary = document.createElement("summary");
-                summary.textContent = `${turno.fecha} - ${turno.mascota}`;
+                summary.textContent = `${turno.fecha} - ${turno.hora}`;
 
                 const p = document.createElement("p");
-                p.innerHTML = `Hora: ${turno.hora}<br>Motivo: ${turno.motivo}<br>Observaciones de motivo: ${turno.observacion}<br>Sede: ${turno.sede}<br>Veterinario: ${turno.veterinario}`;
+                p.innerHTML = `Motivo: ${turno.motivo}<br>Observaciones de motivo: ${turno.observacion}<br>Sede: ${turno.sede}<br>Veterinario: ${turno.veterinario}`;
 
                 const boton = document.createElement("button");
                 boton.className = "cancel-btn";
