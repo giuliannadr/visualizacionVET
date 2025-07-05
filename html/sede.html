@@ -118,13 +118,29 @@
   </div>
 
   <main>
-    <div class="pasos">
-      <p class="paso" id="mascota">MASCOTA</p>
-      <p class="paso" id="motivo">MOTIVO</p>
-      <p class="paso" id="sede">SEDE</p>
-      <p class="paso" id="fecha-hora">FECHA Y HORA</p>
-      <p class="paso" id="veterinario">VETERINARIO</p>
-    </div>
+   <div class="pasos">
+  <div class="paso-contenedor">
+    <p class="paso" id="mascota">MASCOTA</p>
+    <div class="subinfo" id="info-mascota"></div>
+  </div>
+  <div class="paso-contenedor">
+    <p class="paso" id="motivo">MOTIVO</p>
+    <div class="subinfo" id="info-motivo"></div>
+  </div>
+  <div class="paso-contenedor">
+    <p class="paso" id="sede">SEDE</p>
+    <div class="subinfo" id="info-sede"></div>
+  </div>
+  <div class="paso-contenedor">
+    <p class="paso" id="fecha-hora">FECHA Y HORA</p>
+    <div class="subinfo" id="info-fecha-hora"></div>
+  </div>
+  <div class="paso-contenedor">
+    <p class="paso" id="veterinario">VETERINARIO</p>
+    <div class="subinfo" id="info-veterinario"></div>
+  </div>
+</div>
+
     <div class="contenido">
       <div class="titulo">
         <h1 style="font-weight: 600;">SELECCIONE UNA SEDE</h1>
@@ -207,6 +223,23 @@
 
 
   </script>
+  <script>
+  // Mostrar datos guardados en pasos anteriores
+  const mostrarSubinfo = (idCampo, storageKey) => {
+    const valor = localStorage.getItem(storageKey);
+    if (valor) {
+      const subinfo = document.getElementById(`info-${idCampo}`);
+      subinfo.textContent = valor;
+      subinfo.style.display = 'block';
+    }
+  };
+
+  // Usar en cada página según lo que tenga que aparecer
+  mostrarSubinfo('mascota', 'mascota');              // siempre intentamos mostrarla
+  mostrarSubinfo('motivo', 'motivoSelect');
+ 
+</script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>

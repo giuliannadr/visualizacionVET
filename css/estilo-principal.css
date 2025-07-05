@@ -276,7 +276,6 @@ body {
     color: var(--color-verde-oscuro);
     box-shadow: 0 0 15px var(--color-principal);
 }
-
 .pasos {
     display: flex;
     justify-content: center;
@@ -288,9 +287,8 @@ body {
     align-items: center;
     margin: 50px auto 0 auto;
     border-radius: 40px;
-    overflow: hidden;
+    overflow: visible; /* IMPORTANTE: para que subinfo no se corte */
     flex-wrap: wrap;
-    /* Para que los items puedan bajar si no hay espacio */
 }
 
 .pasos p {
@@ -314,13 +312,11 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Media query para pantallas pequeñas */
 @media (max-width: 600px) {
     .pasos {
         flex-direction: column;
         gap: 10px;
         width: 90vw;
-        /* que tome casi todo el ancho */
         margin: 20px auto;
         border-radius: 20px;
         padding: 15px;
@@ -328,12 +324,43 @@ body {
 
     .paso {
         width: 100%;
-        /* ocupa todo el ancho del contenedor */
         font-size: 14px;
         padding: 10px;
         border-radius: 15px;
     }
 }
+
+.paso-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Para que subinfo se posicione relativo a este */
+}
+
+.subinfo {
+    position: absolute;
+    top: 90%;              /* justo debajo del paso */
+    left: 50%; 
+    width: 120px;           
+    transform: translateX(-50%);
+    background-color: #f8f9fa;
+    color: var(--color-verde-oscuro);
+
+    padding: 5px 10px;
+     border-radius: 0 0 15px 15px; /
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: normal;
+    max-width: 150px;
+    text-align: center;
+    word-wrap: break-word;
+    display: none;          /* oculto por defecto */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    white-space: normal;
+    margin-top: 5px; /* opcional para separar un poco del paso */
+}
+
 
 
 body {

@@ -200,13 +200,29 @@
         </div>
     </div>
   <main>
-    <div class="pasos">
-      <p class="paso" id="mascota">MASCOTA</p>
-      <p class="paso" id="motivo">MOTIVO</p>
-      <p class="paso" id="sede">SEDE</p>
-      <p class="paso" id="fecha-hora">FECHA Y HORA</p>
-      <p class="paso" id="veterinario">VETERINARIO</p>
-    </div>
+   <div class="pasos">
+  <div class="paso-contenedor">
+    <p class="paso" id="mascota">MASCOTA</p>
+    <div class="subinfo" id="info-mascota"></div>
+  </div>
+  <div class="paso-contenedor">
+    <p class="paso" id="motivo">MOTIVO</p>
+    <div class="subinfo" id="info-motivo"></div>
+  </div>
+  <div class="paso-contenedor">
+    <p class="paso" id="sede">SEDE</p>
+    <div class="subinfo" id="info-sede"></div>
+  </div>
+  <div class="paso-contenedor">
+    <p class="paso" id="fecha-hora">FECHA Y HORA</p>
+    <div class="subinfo" id="info-fecha-hora"></div>
+  </div>
+  <div class="paso-contenedor">
+    <p class="paso" id="veterinario">VETERINARIO</p>
+    <div class="subinfo" id="info-veterinario"></div>
+  </div>
+</div>
+
     <div class="contenido" style="display: flex; justify-content:  center;">
       <div class="titulo">
         <h1 style="font-weight: 600;">SELECCIONE UNA MASCOTA</h1>
@@ -288,6 +304,7 @@
       }
     });
 
+    
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
