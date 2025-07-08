@@ -276,6 +276,7 @@ body {
     color: var(--color-verde-oscuro);
     box-shadow: 0 0 15px var(--color-principal);
 }
+
 .pasos {
     display: flex;
     justify-content: center;
@@ -287,8 +288,9 @@ body {
     align-items: center;
     margin: 50px auto 0 auto;
     border-radius: 40px;
-    overflow: visible; /* IMPORTANTE: para que subinfo no se corte */
+    overflow: visible;
     flex-wrap: wrap;
+    /* permite que en pantallas chicas se acomoden */
 }
 
 .pasos p {
@@ -310,58 +312,112 @@ body {
     text-align: center;
     line-height: 1;
     transition: all 0.3s ease;
-}
-
-@media (max-width: 600px) {
-    .pasos {
-        flex-direction: column;
-        gap: 10px;
-        width: 90vw;
-        margin: 20px auto;
-        border-radius: 20px;
-        padding: 15px;
-    }
-
-    .paso {
-        width: 100%;
-        font-size: 14px;
-        padding: 10px;
-        border-radius: 15px;
-    }
+    cursor: pointer;
+    position: relative;
 }
 
 .paso-contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Para que subinfo se posicione relativo a este */
+    position: relative;
 }
 
+/* SUBINFO corregida */
 .subinfo {
     position: absolute;
-    top: 90%;              /* justo debajo del paso */
-    left: 50%; 
-    width: 120px;           
+    top: 90%;
+    /* debajo del paso */
+    left: 50%;
     transform: translateX(-50%);
     background-color: #f8f9fa;
     color: var(--color-verde-oscuro);
-
     padding: 5px 10px;
-     border-radius: 0 0 15px 15px; /
+    border-radius: 0 0 15px 15px;
     font-size: 14px;
     font-family: sans-serif;
     font-weight: normal;
-    max-width: 150px;
+    max-width: 200px;
     text-align: center;
     word-wrap: break-word;
-    display: none;          /* oculto por defecto */
+    display: none;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
     z-index: 10;
     white-space: normal;
-    margin-top: 5px; /* opcional para separar un poco del paso */
+    margin-top: 5px;
+}
+
+.subinfo:empty {
+    background-color: #ffffff00;
+}
+
+@media (max-width: 500px) {
+    .navbar-brand img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 670px) {
+    .pasos {
+        flex-direction: column;
+        gap: 15px;
+        width: 90vw;
+        margin: 20px auto;
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .paso-contenedor {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: static;
+        width: 100%;
+    }
+
+    .paso {
+        width: auto;
+        flex-shrink: 0;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 15px;
+        max-width: 140px;
+    }
+
+    .subinfo {
+        position: static;
+        transform: none;
+        margin-top: 0;
+        display: block;
+        background-color: transparent;
+        padding: 3;
+        color: #333;
+        box-shadow: none;
+        font-size: 17px;
+        max-width: none;
+        text-align: center;
+        background-color: #f8f9fa;
+        border-radius: 10px 10px 10px 10px;
+        width: 140px;
+    }
 }
 
 
+@media (max-width: 900px) {
+    .pasos {
+        gap: 10px;
+        margin: 20px auto;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .paso {
+        width: 100%;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+}
 
 body {
     display: flex;
@@ -461,5 +517,5 @@ main {
 }
 
 .bg-amarillo-suave {
-  background-color: rgba(252, 170, 43, 0.15); 
+    background-color: rgba(252, 170, 43, 0.15);
 }

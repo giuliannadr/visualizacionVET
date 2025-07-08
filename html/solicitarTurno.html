@@ -186,42 +186,48 @@
   </nav>
 
   <!-- Offcanvas menú desde la derecha -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Mis Turnos</a></li>
-                <li class="nav-item"><a class="nav-link fw-bold" href="/html/tienda.html">Tienda</a></li>
-                <li class="nav-item"><a class="nav-link fw-bold" href="/html/tips.html">Tips</a></li>
-            </ul>
-        </div>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Mis Turnos</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/html/tienda.html">Tienda</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/html/tips.html">Tips</a></li>
+      </ul>
+    </div>
+  </div>
   <main>
-   <div class="pasos">
-  <div class="paso-contenedor">
-    <p class="paso" id="mascota">MASCOTA</p>
-    <div class="subinfo" id="info-mascota"></div>
-  </div>
-  <div class="paso-contenedor">
-    <p class="paso" id="motivo">MOTIVO</p>
-    <div class="subinfo" id="info-motivo"></div>
-  </div>
-  <div class="paso-contenedor">
-    <p class="paso" id="sede">SEDE</p>
-    <div class="subinfo" id="info-sede"></div>
-  </div>
-  <div class="paso-contenedor">
-    <p class="paso" id="fecha-hora">FECHA Y HORA</p>
-    <div class="subinfo" id="info-fecha-hora"></div>
-  </div>
-  <div class="paso-contenedor">
-    <p class="paso" id="veterinario">VETERINARIO</p>
-    <div class="subinfo" id="info-veterinario"></div>
-  </div>
-</div>
+    <div class="pasos d-flex flex-wrap justify-content-center gap-3 mb-4">
+      <div class="paso-contenedor"
+        style="min-width: 130px; flex: 1 1 150px;">
+        <p class="paso fw-bold mb-1" id="mascota">MASCOTA</p>
+        <div class="subinfo small" id="info-mascota"></div>
+      </div>
+      <div class="paso-contenedor"
+        style="min-width: 130px; flex: 1 1 150px;">
+        <p class="paso fw-bold mb-1" id="motivo">MOTIVO</p>
+        <div class="subinfo small" id="info-motivo"></div>
+      </div>
+      <div class="paso-contenedor"
+        style="min-width: 130px; flex: 1 1 150px;">
+        <p class="paso fw-bold mb-1" id="sede">SEDE</p>
+        <div class="subinfo small" id="info-sede"></div>
+      </div>
+      <div class="paso-contenedor"
+        style="min-width: 130px; flex: 1 1 150px;">
+        <p class="paso fw-bold mb-1" id="fecha-hora">FECHA Y HORA</p>
+        <div class="subinfo small" id="info-fecha-hora"></div>
+      </div>
+      <div class="paso-contenedor"
+        style="min-width: 130px; flex: 1 1 150px;">
+        <p class="paso fw-bold mb-1" id="veterinario">VETERINARIO</p>
+        <div class="subinfo small" id="info-veterinario"></div>
+      </div>
+    </div>
+
 
     <div class="contenido" style="display: flex; justify-content:  center;">
       <div class="titulo">
@@ -304,7 +310,7 @@
       }
     });
 
-    
+
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"

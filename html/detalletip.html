@@ -57,8 +57,72 @@
 
     <main class="d-flex flex-column justify-content-center p-5">
         <section>
-            <article class="card shadow-sm d-flex flex-column flex-md-row p-3 rounded-4">
-                <div class="d-flex flex-column me-md-3 mb-3 mb-md-0 order-2 order-md-1" style="max-width: 450px;">
+            <article class="card shadow-sm d-block d-md-none p-3 rounded-4">
+                <h5 class="card-title fw-bold fs-4 mb-3 texto-verde">
+                    ¿Sabías que tu mascota puede necesitar abrigo si la temperatura baja de 5°C?
+                </h5>
+
+                <img src="../img/perroabrigadou.png" class="img-fluid mb-3 rounded-4" alt="...">
+
+                <div class="d-flex flex-column gap-2 mb-3">
+                    <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
+                        <i class="bi bi-thermometer-half text-primary fs-5"></i>
+                        <small class="fw-semibold">Mantén a tu mascota calentita y feliz</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
+                        <i class="bi bi-heart text-danger fs-5"></i>
+                        <small class="fw-semibold">Protege su salud con ropa adecuada</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
+                        <i class="bi bi-shield-check text-success fs-5"></i>
+                        <small class="fw-semibold">Evita resfriados y problemas respiratorios</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
+                        <i class="bi bi-arrow-repeat text-info fs-5"></i>
+                        <small class="fw-semibold">Usa prendas que permitan movilidad y confort</small>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column gap-2">
+                    <p class="fs-5 fw-semibold texto-principal mb-2">
+                        ¡No dejes que el frío afecte la salud de tu mejor amigo!
+                    </p>
+                    <p class="mb-2">
+                        El frío intenso puede causar problemas serios en perros y gatos, especialmente si no están
+                        protegidos.
+                    </p>
+                    <p class="mb-2">
+                        Al igual que nosotros, algunos perros y gatos sufren el frío, especialmente los de pelo corto.
+                        Cuando la temperatura baja de 5°C, pueden perder calor hasta <strong>5 veces más rápido</strong>
+                        que las personas, lo que afecta su salud y bienestar.
+                    </p>
+                    <p class="mb-2">
+                        El <strong>abrigo</strong> no solo protege del frío, sino que también ayuda a prevenir
+                        enfermedades comunes durante el invierno, como <strong>resfriados</strong>, <strong>infecciones
+                            respiratorias</strong> y <strong>problemas articulares</strong>.
+                    </p>
+                    <ul class="list-group list-group-flush mb-3" style="list-style: none;">
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Mantener a tu mascota seca es
+                            fundamental.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Evita exposiciones prolongadas al
+                            frío.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Observá signos como temblores o
+                            letargo.</li>
+                    </ul>
+                    <p class="mb-2">
+                        Elegí prendas adecuadas según la raza y tamaño de tu mascota. Un abrigo bien ajustado pero
+                        cómodo es clave para su bienestar.
+                    </p>
+                    <p class="mb-0">
+                        Las mascotas mayores o con condiciones especiales necesitan cuidados extra durante el frío.
+                        Consultá con tu veterinario.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card shadow-sm d-none d-md-flex flex-md-row p-3 rounded-4">
+                <!-- Columna izquierda -->
+                <div class="d-flex flex-column me-md-3" style="max-width: 450px;">
                     <img src="../img/perroabrigadou.png" class="img-fluid mb-2 rounded-4" alt="...">
                     <div class="d-flex flex-column gap-2">
                         <div class="d-flex align-items-center gap-2 bg-amarillo-suave rounded px-2 py-1">
@@ -79,11 +143,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex-grow-1 p-3 d-flex flex-column gap-2 order-1 order-md-2">
+
+                <!-- Columna derecha -->
+                <div class="flex-grow-1 d-flex flex-column gap-2">
                     <h5 class="card-title fw-bold fs-4 mb-2 texto-verde">
                         ¿Sabías que tu mascota puede necesitar abrigo si la temperatura baja de 5°C?
                     </h5>
-
                     <p class="fs-5 fw-semibold texto-principal mb-2">
                         ¡No dejes que el frío afecte la salud de tu mejor amigo!
                     </p>
@@ -94,40 +159,33 @@
                     <p class="mb-2">
                         Al igual que nosotros, algunos perros y gatos sufren el frío, especialmente los de pelo corto.
                         Cuando la temperatura baja de 5°C, pueden perder calor hasta <strong>5 veces más rápido</strong>
-                        que
-                        las personas, lo que afecta su salud y bienestar.
+                        que las personas, lo que afecta su salud y bienestar.
                     </p>
-
                     <p class="mb-2">
                         El <strong>abrigo</strong> no solo protege del frío, sino que también ayuda a prevenir
-                        enfermedades
-                        comunes durante el invierno, como <strong>resfriados</strong>, <strong>infecciones
+                        enfermedades comunes durante el invierno, como <strong>resfriados</strong>, <strong>infecciones
                             respiratorias</strong> y <strong>problemas articulares</strong>.
                     </p>
-
                     <ul class="list-group list-group-flush mb-3" style="list-style: none;">
                         <li><i class="bi bi-check-circle-fill text-success me-2"></i>Mantener a tu mascota seca es
                             fundamental.</li>
                         <li><i class="bi bi-check-circle-fill text-success me-2"></i>Evita exposiciones prolongadas al
-                            frío,
-                            especialmente en paseos.</li>
+                            frío.</li>
                         <li><i class="bi bi-check-circle-fill text-success me-2"></i>Observá signos como temblores o
-                            letargo, que indican que tiene frío.</li>
+                            letargo.</li>
                     </ul>
-
                     <p class="mb-2">
                         Elegí prendas adecuadas según la raza y tamaño de tu mascota. Un abrigo bien ajustado pero
-                        cómodo es
-                        clave para su bienestar.
+                        cómodo es clave para su bienestar.
                     </p>
                     <p class="mb-0">
-                        Las mascotas mayores o con condiciones especiales necesitan cuidados extra durante el frío, así
-                        que
-                        consultá siempre con tu veterinario.
+                        Las mascotas mayores o con condiciones especiales necesitan cuidados extra durante el frío.
+                        Consultá con tu veterinario.
                     </p>
                 </div>
             </article>
         </section>
+        
         <section class="d-flex flex-column align-items-center justify-content-center p-4 p-md-2">
             <div class="container p-4 p-md-5 text-center">
                 <h2 class="fw-bold fs-md-2 mb-5" style="color: var(--color-verde-oscuro);">TAMBIÉN TE RECOMENDAMOS:
