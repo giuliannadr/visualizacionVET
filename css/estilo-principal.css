@@ -17,6 +17,14 @@ body {
     background-position: center -100px;
 }
 
+.fondoentero {
+    background-image: url('../img/fondos/fondo-waves2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .texto-principal {
     color: var(--color-principal) !important;
 }
@@ -337,7 +345,7 @@ body {
     font-size: 14px;
     font-family: sans-serif;
     font-weight: normal;
-    max-width: 200px;
+    max-width: 100px;
     text-align: center;
     word-wrap: break-word;
     display: none;
@@ -345,10 +353,15 @@ body {
     z-index: 10;
     white-space: normal;
     margin-top: 5px;
+    width: 100%;
 }
 
 .subinfo:empty {
     background-color: #ffffff00;
+}
+
+.vacio:empty{
+    display: none;
 }
 
 @media (max-width: 500px) {

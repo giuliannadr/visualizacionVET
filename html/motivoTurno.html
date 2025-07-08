@@ -236,43 +236,43 @@
   </nav>
 
   <!-- Offcanvas menú desde la derecha -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Mis Turnos</a></li>
-                <li class="nav-item"><a class="nav-link fw-bold" href="/html/tienda.html">Tienda</a></li>
-                <li class="nav-item"><a class="nav-link fw-bold" href="/html/tips.html">Tips</a></li>
-            </ul>
-        </div>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link fw-bold" href="/html/turnos.html">Mis Turnos</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/html/tienda.html">Tienda</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/html/tips.html">Tips</a></li>
+      </ul>
+    </div>
+  </div>
 
   <main>
-  <div class="pasos">
-  <div class="paso-contenedor">
-    <p class="paso" id="mascota">MASCOTA</p>
-    <div class="subinfo" id="info-mascota"></div>
-  </div>
-  <div class="paso-contenedor">
-    <p class="paso" id="motivo">MOTIVO</p>
-    <div class="subinfo" id="info-motivo"></div>
-  </div>
-  <div class="paso-contenedor">
-    <p class="paso" id="sede">SEDE</p>
-    <div class="subinfo" id="info-sede"></div>
-  </div>
-  <div class="paso-contenedor">
-    <p class="paso" id="fecha-hora">FECHA Y HORA</p>
-    <div class="subinfo" id="info-fecha-hora"></div>
-  </div>
-  <div class="paso-contenedor">
-    <p class="paso" id="veterinario">VETERINARIO</p>
-    <div class="subinfo" id="info-veterinario"></div>
-  </div>
-</div>
+    <div class="pasos">
+      <div class="paso-contenedor">
+        <p class="paso" id="mascota">MASCOTA</p>
+        <div class="subinfo" id="info-mascota"></div>
+      </div>
+      <div class="paso-contenedor">
+        <p class="paso" id="motivo">MOTIVO</p>
+        <div class="subinfo" id="info-motivo"></div>
+      </div>
+      <div class="paso-contenedor">
+        <p class="paso" id="sede">SEDE</p>
+        <div class="subinfo" id="info-sede"></div>
+      </div>
+      <div class="paso-contenedor">
+        <p class="paso" id="fecha-hora">FECHA Y HORA</p>
+        <div class="subinfo" id="info-fecha-hora"></div>
+      </div>
+      <div class="paso-contenedor">
+        <p class="paso" id="veterinario">VETERINARIO</p>
+        <div class="subinfo" id="info-veterinario"></div>
+      </div>
+    </div>
 
     <div class="contenido">
       <div class="titulo">
@@ -354,20 +354,20 @@
 
   </script>
   <script>
-  // Mostrar datos guardados en pasos anteriores
-  const mostrarSubinfo = (idCampo, storageKey) => {
-    const valor = localStorage.getItem(storageKey);
-    if (valor) {
-      const subinfo = document.getElementById(`info-${idCampo}`);
-      subinfo.textContent = valor;
-      subinfo.style.display = 'block';
-    }
-  };
+    // Mostrar datos guardados en pasos anteriores
+    const mostrarSubinfo = (idCampo, storageKey) => {
+      const valor = localStorage.getItem(storageKey);
+      if (valor) {
+        const subinfo = document.getElementById(`info-${idCampo}`);
+        subinfo.textContent = valor;
+        subinfo.style.display = 'block';
+      }
+    };
 
-  // Usar en cada página según lo que tenga que aparecer
-  mostrarSubinfo('mascota', 'mascota');              // siempre intentamos mostrarla
+    // Usar en cada página según lo que tenga que aparecer
+    mostrarSubinfo('mascota', 'mascota');              // siempre intentamos mostrarla
 
-</script>
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
